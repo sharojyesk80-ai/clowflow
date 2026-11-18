@@ -1,0 +1,2949 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ClowFlow — Professional Websites for Nepalese Businesses | Starting at NPR 7,000</title>
+  <meta name="description" content="ClowFlow builds professional, mobile-friendly websites with WhatsApp integration and appointment booking for clinics, dental studios, salons, restaurants, and shops in Nepal starting at NPR 7,000." />
+  <meta name="keywords" content="Website development Nepal, affordable website Nepal, clinic website Nepal, ClowFlow, web design Kathmandu, business website NPR 7000" />
+  <meta property="og:title" content="ClowFlow — Your Business. Online. Growing." />
+  <meta property="og:description" content="Turn visitors into customers with a beautiful, mobile-friendly website featuring WhatsApp integration and appointment booking starting at NPR 7,000." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/png" href="https://i.ibb.co/CpWks7bj/logo.png" />
+
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+          },
+          colors: {
+            navy: '#101828',
+            electric: '#3867FF',
+            cyanGlow: '#42D9F8',
+            surface: '#F8FAFC',
+          },
+          animation: {
+            'float-slow': 'floatSlow 6s ease-in-out infinite',
+            'float-delayed': 'floatSlow 7s ease-in-out 2s infinite',
+            'pulse-soft': 'pulseSoft 3s ease-in-out infinite',
+          },
+          keyframes: {
+            floatSlow: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-8px)' },
+            },
+            pulseSoft: {
+              '0%, 100%': { opacity: '1' },
+              '50%': { opacity: '0.65' },
+            },
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+      background-color: #F8FAFC;
+      color: #101828;
+      overflow-x: hidden;
+    }
+
+    /* Subtle architectural dot grid */
+    .bg-dot-grid {
+      background-image: radial-gradient(#CBD5E1 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+
+    /* 3D Perspective Card for Desktop */
+    @media (min-width: 1024px) {
+      .hero-browser-3d {
+        transform: perspective(1200px) rotateY(-4deg) rotateX(2deg);
+        transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.5s ease;
+      }
+      .hero-browser-3d:hover {
+        transform: perspective(1200px) rotateY(-1deg) rotateX(0deg) translateY(-4px);
+      }
+    }
+
+    /* Custom Scrollbar for Comparison Table */
+    .custom-scrollbar::-webkit-scrollbar {
+      height: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #F1F5F9;
+      border-radius: 9999px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #CBD5E1;
+      border-radius: 9999px;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-[#3867FF] selection:text-white">
+
+  <!-- ======================================================================
+       3. STICKY NAVIGATION BAR
+  ======================================================================= -->
+  <header id="navbar" class="fixed top-0 inset-x-0 z-40 bg-white/85 backdrop-blur-xl border-b border-slate-200/70 py-4 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <a href="#home" class="inline-flex items-center gap-2.5 group focus:outline-none">
+        <div class="relative w-10 h-10 rounded-xl bg-gradient-to-br from-[#3867FF] to-[#42D9F8] p-[1.5px] shadow-md shadow-blue-500/20">
+          <div class="w-full h-full rounded-[10.5px] bg-[#101828] flex items-center justify-center overflow-hidden">
+            <img
+              src="https://i.ibb.co/CpWks7bj/logo.png"
+              alt="ClowFlow Logo"
+              class="w-full h-full object-cover"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+            />
+            <span style="display:none;" class="w-full h-full items-center justify-center text-[#42D9F8] font-extrabold text-sm">CF</span>
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-extrabold text-xl tracking-tight leading-none text-[#101828]">
+            Clow<span class="text-[#3867FF]">Flow</span>
+          </span>
+          <span class="text-[10px] font-semibold tracking-wider uppercase mt-0.5 text-slate-500">
+            Your Business. Online. Growing.
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden lg:flex items-center gap-8" aria-label="Main Navigation">
+        <a href="#home" class="text-sm font-semibold text-slate-600 hover:text-[#3867FF] transition-colors">Home</a>
+        <a href="#services" class="text-sm font-semibold text-slate-600 hover:text-[#3867FF] transition-colors">Services</a>
+        <a href="#pricing" class="text-sm font-semibold text-slate-600 hover:text-[#3867FF] transition-colors">Pricing</a>
+        <a href="#industries" class="text-sm font-semibold text-slate-600 hover:text-[#3867FF] transition-colors">Industries</a>
+        <a href="#portfolio" class="text-sm font-semibold text-slate-600 hover:text-[#3867FF] transition-colors">Portfolio</a>
+        <a href="#faq" class="text-sm font-semibold text-slate-600 hover:text-[#3867FF] transition-colors">FAQ</a>
+      </nav>
+
+      <!-- Desktop Right CTA -->
+      <div class="hidden lg:flex items-center gap-3">
+        <a
+          href="https://wa.me/9779769022308?text=Hello%20ClowFlow!%20I%20am%20interested%20in%20building%20a%20website%20for%20my%20business.%20Please%20share%20more%20details%20about%20your%20packages."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-1.5 text-sm font-semibold text-slate-700 hover:text-[#101828] px-3 py-2 rounded-xl hover:bg-slate-100 transition-colors"
+        >
+          <i data-lucide="message-circle" class="w-4 h-4 text-emerald-600"></i>
+          <span>WhatsApp</span>
+        </a>
+        <button
+          type="button"
+          onclick="startInquiry()"
+          class="inline-flex items-center gap-2 bg-[#101828] hover:bg-[#3867FF] text-white text-sm font-semibold px-5 py-2.5 rounded-xl shadow-md shadow-slate-900/10 hover:shadow-blue-600/25 transition-all duration-300 cursor-pointer"
+        >
+          <span>Get Your Website</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button
+        type="button"
+        id="mobileMenuBtn"
+        aria-label="Toggle Menu"
+        aria-expanded="false"
+        class="lg:hidden p-2.5 rounded-xl text-[#101828] hover:bg-slate-100 transition-colors cursor-pointer"
+      >
+        <i id="menuIconOpen" data-lucide="menu" class="w-6 h-6"></i>
+        <i id="menuIconClose" data-lucide="x" class="w-6 h-6 hidden"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Responsive Drawer -->
+    <div id="mobileMenuDrawer" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-3 pb-6 shadow-xl">
+      <nav class="flex flex-col space-y-1">
+        <a href="#home" onclick="closeMobileMenu()" class="px-3 py-3 rounded-xl text-base font-semibold text-slate-700 hover:bg-slate-50 hover:text-[#3867FF]">Home</a>
+        <a href="#services" onclick="closeMobileMenu()" class="px-3 py-3 rounded-xl text-base font-semibold text-slate-700 hover:bg-slate-50 hover:text-[#3867FF]">Services</a>
+        <a href="#pricing" onclick="closeMobileMenu()" class="px-3 py-3 rounded-xl text-base font-semibold text-slate-700 hover:bg-slate-50 hover:text-[#3867FF]">Pricing</a>
+        <a href="#industries" onclick="closeMobileMenu()" class="px-3 py-3 rounded-xl text-base font-semibold text-slate-700 hover:bg-slate-50 hover:text-[#3867FF]">Industries</a>
+        <a href="#portfolio" onclick="closeMobileMenu()" class="px-3 py-3 rounded-xl text-base font-semibold text-slate-700 hover:bg-slate-50 hover:text-[#3867FF]">Portfolio</a>
+        <a href="#faq" onclick="closeMobileMenu()" class="px-3 py-3 rounded-xl text-base font-semibold text-slate-700 hover:bg-slate-50 hover:text-[#3867FF]">FAQ</a>
+      </nav>
+      <div class="mt-4 pt-4 border-t border-slate-100 flex flex-col gap-3">
+        <button
+          type="button"
+          onclick="closeMobileMenu(); startInquiry();"
+          class="w-full inline-flex items-center justify-center gap-2 bg-[#3867FF] text-white font-semibold py-3.5 px-5 rounded-xl shadow-lg shadow-blue-600/20 cursor-pointer"
+        >
+          <span>Get Your Website</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </button>
+        <a
+          href="https://wa.me/9779769022308?text=Hello%20ClowFlow!%20I%20am%20interested%20in%20building%20a%20website%20for%20my%20business.%20Please%20share%20more%20details%20about%20your%20packages."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-full inline-flex items-center justify-center gap-2 bg-emerald-50 text-emerald-700 border border-emerald-200 font-semibold py-3 px-5 rounded-xl"
+        >
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
+          <span>Chat on WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ======================================================================
+       4. HERO SECTION — HIGH-CONVERTING
+  ======================================================================= -->
+  <section id="home" class="relative pt-28 pb-20 lg:pt-36 lg:pb-28 overflow-hidden bg-dot-grid">
+    <div class="absolute -top-32 right-0 w-[520px] h-[520px] rounded-full bg-gradient-to-br from-[#3867FF]/15 via-[#42D9F8]/15 to-transparent blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-0 -left-24 w-[420px] h-[420px] rounded-full bg-gradient-to-tr from-[#42D9F8]/15 to-transparent blur-3xl pointer-events-none"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
+        <!-- Left Copy -->
+        <div class="lg:col-span-6 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200/80 text-[#3867FF] text-xs font-extrabold tracking-wider uppercase">
+            <span class="w-2 h-2 rounded-full bg-[#3867FF] animate-pulse"></span>
+            <span>WEBSITE DEVELOPMENT FOR NEPALESE BUSINESSES</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-[52px] font-extrabold tracking-tight text-[#101828] leading-[1.12]">
+            Your Business Deserves More Than Just a Facebook Page.
+            <span class="block mt-1 bg-gradient-to-r from-[#3867FF] to-[#0EA5E9] bg-clip-text text-transparent">
+              Get Your Own Professional Website.
+            </span>
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-xl">
+            Turn visitors into customers with a beautiful, mobile-friendly website featuring WhatsApp integration, appointment booking, and everything your business needs to grow online.
+          </p>
+
+          <!-- Prominent Pricing Callout -->
+          <div class="inline-flex flex-wrap items-center gap-3.5 bg-white border border-slate-200/90 rounded-2xl px-4 py-3 shadow-sm">
+            <div class="w-10 h-10 rounded-xl bg-blue-50 text-[#3867FF] flex items-center justify-center font-extrabold text-xs">
+              NPR
+            </div>
+            <div>
+              <div class="text-sm sm:text-base font-extrabold text-[#101828]">
+                Websites Starting at NPR 7,000
+              </div>
+              <div class="text-xs text-slate-500">
+                Built for clinics, dental studios, salons, restaurants &amp; retail shops
+              </div>
+            </div>
+          </div>
+
+          <!-- Primary & Secondary CTAs -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-1">
+            <button
+              type="button"
+              onclick="startInquiry()"
+              class="inline-flex items-center justify-center gap-2 bg-[#3867FF] hover:bg-[#2854E8] text-white font-bold text-base px-7 py-4 rounded-2xl shadow-xl shadow-blue-600/25 hover:shadow-blue-600/35 transition-all duration-300 cursor-pointer"
+            >
+              <span>Get My Website</span>
+              <i data-lucide="arrow-right" class="w-5 h-5"></i>
+            </button>
+            <a
+              href="#pricing"
+              class="inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-[#101828] border border-slate-200 font-bold text-base px-7 py-4 rounded-2xl shadow-sm transition-all duration-200"
+            >
+              <span>Explore Packages</span>
+            </a>
+          </div>
+
+          <div class="pt-1">
+            <a
+              href="https://wa.me/9779769022308?text=Hello%20ClowFlow!%20I%20am%20interested%20in%20building%20a%20website%20for%20my%20business.%20Please%20share%20more%20details%20about%20your%20packages."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 hover:text-emerald-800 transition-colors"
+            >
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              <span>Chat directly on WhatsApp (+977 9769022308)</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right 3D Browser & Floating Mobile Mockups -->
+        <div class="lg:col-span-6 relative">
+          <div class="relative mx-auto max-w-xl lg:max-w-none">
+            <!-- 3D Browser Mockup: Example Clinic Website -->
+            <div class="hero-browser-3d bg-white rounded-2xl border border-slate-200/90 shadow-2xl shadow-slate-900/10 overflow-hidden">
+              <div class="bg-[#101828] px-4 py-3 flex items-center justify-between">
+                <div class="flex items-center gap-1.5">
+                  <span class="w-2.5 h-2.5 rounded-full bg-rose-400"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+                </div>
+                <div class="bg-slate-800/90 text-slate-300 text-[11px] px-3 py-1 rounded-md font-medium truncate max-w-[220px]">
+                  citycareclinic.com.np
+                </div>
+                <span class="text-[10px] font-semibold uppercase tracking-wider text-[#42D9F8]">Demo</span>
+              </div>
+
+              <div class="p-5 sm:p-6 bg-gradient-to-b from-blue-50/60 to-white">
+                <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+                  <div class="flex items-center gap-2.5">
+                    <div class="w-8 h-8 rounded-lg bg-[#3867FF] text-white flex items-center justify-center">
+                      <i data-lucide="stethoscope" class="w-4 h-4"></i>
+                    </div>
+                    <div>
+                      <div class="text-xs font-extrabold text-[#101828]">CityCare Medical Clinic</div>
+                      <div class="text-[10px] text-slate-500">Kathmandu • Open 7 AM – 7 PM</div>
+                    </div>
+                  </div>
+                  <span class="bg-[#3867FF] text-white text-[11px] font-bold px-3 py-1.5 rounded-lg">
+                    Book OPD
+                  </span>
+                </div>
+
+                <div class="py-4 grid grid-cols-12 gap-4 items-center">
+                  <div class="col-span-7 space-y-2">
+                    <span class="inline-block text-[10px] font-bold uppercase tracking-wider text-[#3867FF] bg-blue-100/70 px-2 py-0.5 rounded">
+                      Healthcare &amp; Diagnostics
+                    </span>
+                    <h3 class="text-base sm:text-lg font-extrabold text-[#101828] leading-snug">
+                      Trusted Specialists &amp; Easy Online Appointments
+                    </h3>
+                    <p class="text-xs text-slate-500 leading-relaxed">
+                      View doctor timings, check departments, and request your visit online.
+                    </p>
+                  </div>
+                  <div class="col-span-5 bg-white border border-slate-200/80 rounded-xl p-3 shadow-sm space-y-2">
+                    <div class="text-[10px] font-bold text-slate-400 uppercase">Quick Request</div>
+                    <div class="h-6 bg-slate-100 rounded px-2 flex items-center text-[10px] text-slate-600">
+                      General Checkup
+                    </div>
+                    <div class="h-6 bg-slate-100 rounded px-2 flex items-center text-[10px] text-slate-600">
+                      Tomorrow • 10:30 AM
+                    </div>
+                    <div class="h-6 bg-[#101828] rounded flex items-center justify-center text-[10px] font-bold text-white">
+                      Confirm Slot
+                    </div>
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-3 gap-2 pt-2">
+                  <div class="bg-slate-50 border border-slate-200/70 rounded-lg py-2 px-2.5 text-center text-[11px] font-semibold text-slate-700">
+                    Doctor Profiles
+                  </div>
+                  <div class="bg-slate-50 border border-slate-200/70 rounded-lg py-2 px-2.5 text-center text-[11px] font-semibold text-slate-700">
+                    Lab Services
+                  </div>
+                  <div class="bg-slate-50 border border-slate-200/70 rounded-lg py-2 px-2.5 text-center text-[11px] font-semibold text-slate-700">
+                    Google Maps
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating Mobile Mockup: Example Retail Website -->
+            <div class="hidden sm:block absolute -bottom-10 -left-6 w-52 bg-[#101828] rounded-[26px] p-2 shadow-2xl border border-slate-700 animate-float-slow">
+              <div class="bg-white rounded-[20px] overflow-hidden">
+                <div class="bg-emerald-600 text-white px-3 py-2.5 flex items-center justify-between">
+                  <div>
+                    <div class="text-[10px] font-extrabold">Vastra Retail Store</div>
+                    <div class="text-[9px] text-emerald-100">Product Catalog Demo</div>
+                  </div>
+                  <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
+                </div>
+                <div class="p-3 space-y-2.5">
+                  <div class="bg-slate-50 rounded-xl p-2 border border-slate-100 flex items-center justify-between">
+                    <div>
+                      <div class="text-[10px] font-bold text-[#101828]">Cotton Kurta Set</div>
+                      <div class="text-[9px] text-slate-500">NPR 2,450 • In Stock</div>
+                    </div>
+                    <span class="text-[9px] font-bold bg-emerald-100 text-emerald-800 px-1.5 py-0.5 rounded">Order</span>
+                  </div>
+                  <div class="bg-slate-50 rounded-xl p-2 border border-slate-100 flex items-center justify-between">
+                    <div>
+                      <div class="text-[10px] font-bold text-[#101828]">Handloom Shawl</div>
+                      <div class="text-[9px] text-slate-500">NPR 1,800 • In Stock</div>
+                    </div>
+                    <span class="text-[9px] font-bold bg-emerald-100 text-emerald-800 px-1.5 py-0.5 rounded">Order</span>
+                  </div>
+                  <div class="w-full py-1.5 rounded-lg bg-emerald-600 text-white text-center text-[10px] font-bold flex items-center justify-center gap-1">
+                    <i data-lucide="message-circle" class="w-3 h-3"></i>
+                    <span>Inquire on WhatsApp</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating Appointment Confirmation Notification -->
+            <div class="mt-4 sm:mt-0 sm:absolute sm:-top-5 sm:-right-4 bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl px-4 py-3 shadow-xl flex items-center gap-3 animate-float-delayed">
+              <div class="w-9 h-9 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
+                <i data-lucide="calendar" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <div class="text-xs font-extrabold text-[#101828]">Appointment Request Received</div>
+                <div class="text-[11px] text-slate-500">Dental Checkup • Preferred: 11:00 AM</div>
+              </div>
+            </div>
+
+            <!-- Floating WhatsApp Icon Pill -->
+            <a
+              href="https://wa.me/9779769022308?text=Hello%20ClowFlow!%20I%20am%20interested%20in%20building%20a%20website%20for%20my%20business.%20Please%20share%20more%20details%20about%20your%20packages."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hidden sm:flex absolute -bottom-5 right-6 bg-[#25D366] hover:bg-[#20bd5a] text-white rounded-2xl px-4 py-2.5 shadow-lg shadow-emerald-600/25 items-center gap-2 text-xs font-bold transition-transform hover:scale-105"
+            >
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              <span>Direct WhatsApp Connect</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       5. TRUST AND VALUE SECTION
+  ======================================================================= -->
+  <section id="services" class="py-20 bg-white border-y border-slate-200/70">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center mb-14">
+        <span class="text-xs font-extrabold tracking-widest uppercase text-[#3867FF]">CORE CAPABILITIES</span>
+        <h2 class="mt-2 text-3xl sm:text-4xl font-extrabold text-[#101828] tracking-tight">
+          Everything Your Business Needs to Grow Online.
+        </h2>
+        <p class="mt-3 text-base sm:text-lg text-slate-600">
+          Practical, conversion-focused website essentials built specifically for Nepalese businesses and customers.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="group bg-[#F8FAFC] hover:bg-white rounded-2xl p-7 border border-slate-200/80 hover:border-[#3867FF]/40 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+          <div class="w-12 h-12 rounded-2xl bg-blue-50 text-[#3867FF] flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+            <i data-lucide="sparkles" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-lg font-extrabold text-[#101828] mb-2">Professional Design</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">Beautiful websites that make your business look trustworthy.</p>
+        </div>
+
+        <div class="group bg-[#F8FAFC] hover:bg-white rounded-2xl p-7 border border-slate-200/80 hover:border-[#3867FF]/40 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+          <div class="w-12 h-12 rounded-2xl bg-cyan-50 text-sky-600 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+            <i data-lucide="calendar" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-lg font-extrabold text-[#101828] mb-2">Appointment Booking</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">Let customers request appointments without repeatedly calling your business.</p>
+        </div>
+
+        <div class="group bg-[#F8FAFC] hover:bg-white rounded-2xl p-7 border border-slate-200/80 hover:border-[#3867FF]/40 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+            <i data-lucide="message-circle" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-lg font-extrabold text-[#101828] mb-2">WhatsApp Integration</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">Allow customers to contact your business instantly.</p>
+        </div>
+
+        <div class="group bg-[#F8FAFC] hover:bg-white rounded-2xl p-7 border border-slate-200/80 hover:border-[#3867FF]/40 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+          <div class="w-12 h-12 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+            <i data-lucide="smartphone" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-lg font-extrabold text-[#101828] mb-2">Mobile-Friendly Experience</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">Make your website look excellent on smartphones, tablets, and desktops.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       6. INDUSTRIES WE SERVE
+  ======================================================================= -->
+  <section id="industries" class="py-20 lg:py-24 bg-[#F8FAFC]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center mb-14">
+        <span class="text-xs font-extrabold tracking-widest uppercase text-[#3867FF]">TAILORED SOLUTIONS</span>
+        <h2 class="mt-2 text-3xl sm:text-4xl font-extrabold text-[#101828] tracking-tight">
+          One Website. Endless Possibilities.
+        </h2>
+        <p class="mt-3 text-base sm:text-lg text-slate-600">
+          Tailored website structures designed for the specific needs of Nepalese clinics, salons, cafes, shops, and service businesses.
+        </p>
+      </div>
+
+      <div id="industriesGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7"></div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       7. PRICING SECTION — MOST IMPORTANT
+  ======================================================================= -->
+  <section id="pricing" class="py-20 lg:py-28 bg-white border-y border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <span class="text-xs font-extrabold tracking-widest uppercase text-[#3867FF]">TRANSPARENT PACKAGES</span>
+        <h2 class="mt-2 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#101828] tracking-tight">
+          Choose the Perfect Website for Your Business.
+        </h2>
+        <p class="mt-3 text-base sm:text-lg text-slate-600">
+          Affordable, professional, and built to help your business grow.
+        </p>
+      </div>
+
+      <div id="pricingCardsGrid" class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch max-w-6xl mx-auto"></div>
+
+      <!-- Domain, Hosting & Terms Note -->
+      <div class="max-w-4xl mx-auto mt-10 bg-blue-50/70 border border-blue-200/80 rounded-2xl p-4 sm:p-5 flex items-start gap-3.5">
+        <i data-lucide="info" class="w-5 h-5 text-[#3867FF] shrink-0 mt-0.5"></i>
+        <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+          <strong class="text-[#101828]">Clear Package Terms:</strong> Domain, hosting, paid third-party services, and renewals are subject to the agreed package terms and will be clearly explained before starting your project.
+        </p>
+      </div>
+
+      <!-- Package Comparison Table -->
+      <div class="max-w-6xl mx-auto mt-16">
+        <div class="text-center mb-8">
+          <h3 class="text-2xl font-extrabold text-[#101828]">Compare Package Features</h3>
+          <p class="text-sm text-slate-600 mt-1">Side-by-side breakdown of Basic, Growth, and Pro.</p>
+        </div>
+
+        <div class="overflow-x-auto custom-scrollbar rounded-2xl border border-slate-200 shadow-sm bg-white">
+          <table class="w-full text-left border-collapse min-w-[680px]">
+            <thead>
+              <tr class="bg-slate-50 border-b border-slate-200">
+                <th class="py-4 px-6 text-sm font-extrabold text-[#101828] w-2/5">Feature</th>
+                <th class="py-4 px-5 text-center">
+                  <div class="text-sm font-extrabold text-[#101828]">Basic</div>
+                  <div class="text-xs font-bold text-[#3867FF]">NPR 7,000</div>
+                </th>
+                <th class="py-4 px-5 text-center bg-blue-50/70">
+                  <div class="text-[10px] font-extrabold uppercase tracking-wider text-[#3867FF]">Most Popular</div>
+                  <div class="text-sm font-extrabold text-[#101828]">Growth</div>
+                  <div class="text-xs font-bold text-[#3867FF]">NPR 10,000</div>
+                </th>
+                <th class="py-4 px-5 text-center">
+                  <div class="text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Best Value</div>
+                  <div class="text-sm font-extrabold text-[#101828]">Pro</div>
+                  <div class="text-xs font-bold text-[#3867FF]">NPR 11,000</div>
+                </th>
+              </tr>
+            </thead>
+            <tbody id="comparisonTableBody" class="divide-y divide-slate-200/80 text-sm"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       8. INTERACTIVE WEBSITE DEMONSTRATIONS
+  ======================================================================= -->
+  <section class="py-20 lg:py-24 bg-[#F8FAFC]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center mb-12">
+        <span class="text-xs font-extrabold tracking-widest uppercase text-[#3867FF]">INTERACTIVE DEMONSTRATIONS</span>
+        <h2 class="mt-2 text-3xl sm:text-4xl font-extrabold text-[#101828] tracking-tight">
+          See What Your Business Could Look Like.
+        </h2>
+        <p class="mt-3 text-base text-slate-600">
+          Switch between realistic website demonstrations and test desktop or mobile layouts.
+        </p>
+      </div>
+
+      <!-- Demo Tabs & Viewport Switcher -->
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4 max-w-5xl mx-auto mb-8">
+        <div class="flex flex-wrap justify-center gap-2 bg-white p-1.5 rounded-2xl border border-slate-200 shadow-sm">
+          <button type="button" data-demo="medical-demo" onclick="selectDemo('medical-demo')" class="demo-tab-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer bg-[#101828] text-white shadow-sm">
+            Modern Medical Clinic
+          </button>
+          <button type="button" data-demo="dental-demo" onclick="selectDemo('dental-demo')" class="demo-tab-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer text-slate-600 hover:text-[#101828] hover:bg-slate-100">
+            Premium Dental Clinic
+          </button>
+          <button type="button" data-demo="retail-demo" onclick="selectDemo('retail-demo')" class="demo-tab-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer text-slate-600 hover:text-[#101828] hover:bg-slate-100">
+            Modern Retail Store
+          </button>
+        </div>
+
+        <div class="inline-flex items-center gap-1 bg-white p-1.5 rounded-2xl border border-slate-200 shadow-sm">
+          <button type="button" id="btnDesktopView" onclick="setDemoViewport('desktop')" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer bg-[#3867FF] text-white">
+            <i data-lucide="monitor" class="w-4 h-4"></i>
+            <span>Desktop</span>
+          </button>
+          <button type="button" id="btnMobileView" onclick="setDemoViewport('mobile')" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer text-slate-600 hover:bg-slate-100">
+            <i data-lucide="smartphone" class="w-4 h-4"></i>
+            <span>Mobile</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Browser / Mobile Frame -->
+      <div class="max-w-5xl mx-auto">
+        <div id="demoBrowserFrame" class="mx-auto transition-all duration-500 bg-white border border-slate-200/90 shadow-2xl overflow-hidden w-full rounded-3xl">
+          <div class="bg-[#101828] px-4 py-3 flex items-center justify-between text-white">
+            <div class="flex items-center gap-1.5">
+              <span class="w-2.5 h-2.5 rounded-full bg-rose-400"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+            </div>
+            <div class="text-[11px] font-medium text-slate-300 bg-slate-800 px-3 py-1 rounded-full">
+              DEMONSTRATION WEBSITE PREVIEW
+            </div>
+            <div id="demoPackageBadge" class="text-[11px] font-semibold text-[#42D9F8] hidden sm:block">
+              Growth Package (NPR 10,000)
+            </div>
+          </div>
+
+          <div id="demoViewportContent" class="p-5 sm:p-8 space-y-6 bg-gradient-to-b from-slate-50 to-white"></div>
+
+          <div class="bg-slate-900 px-5 py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <div class="text-xs text-slate-300 text-center sm:text-left">
+              Want a similar website customized with your actual business details?
+            </div>
+            <button
+              type="button"
+              id="demoOrderBtn"
+              class="inline-flex items-center gap-2 bg-[#3867FF] hover:bg-[#4975FF] text-white text-xs sm:text-sm font-bold px-5 py-2.5 rounded-xl transition-colors shrink-0 cursor-pointer"
+            >
+              <span id="demoOrderBtnText">Order Similar Website</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       9. HOW IT WORKS
+  ======================================================================= -->
+  <section class="py-20 bg-white border-y border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <span class="text-xs font-extrabold tracking-widest uppercase text-[#3867FF]">SIMPLE WORKFLOW</span>
+        <h2 class="mt-2 text-3xl sm:text-4xl font-extrabold text-[#101828] tracking-tight">
+          Your Website in 4 Simple Steps.
+        </h2>
+        <p class="mt-3 text-base text-slate-600">
+          Clear, step-by-step collaboration from inquiry to launch.
+        </p>
+      </div>
+
+      <div class="relative max-w-6xl mx-auto">
+        <div class="hidden lg:block absolute top-8 left-[12%] right-[12%] h-0.5 bg-gradient-to-r from-[#3867FF] via-[#42D9F8] to-[#3867FF]"></div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 relative">
+          <div class="relative flex lg:flex-col items-start lg:items-center lg:text-center gap-4">
+            <div class="lg:hidden absolute left-7 top-14 bottom-[-2rem] w-0.5 bg-blue-200"></div>
+            <div class="relative z-10 w-14 h-14 lg:w-16 lg:h-16 rounded-2xl bg-[#101828] text-white font-extrabold text-lg flex items-center justify-center shadow-lg ring-4 ring-white shrink-0">
+              <span class="text-[#42D9F8]">01</span>
+            </div>
+            <div class="bg-[#F8FAFC] rounded-2xl p-5 border border-slate-200/80 flex-1 w-full">
+              <h3 class="text-base font-extrabold text-[#101828] mb-1.5">Tell Us About Your Business</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">Complete our short project inquiry form.</p>
+            </div>
+          </div>
+
+          <div class="relative flex lg:flex-col items-start lg:items-center lg:text-center gap-4">
+            <div class="lg:hidden absolute left-7 top-14 bottom-[-2rem] w-0.5 bg-blue-200"></div>
+            <div class="relative z-10 w-14 h-14 lg:w-16 lg:h-16 rounded-2xl bg-[#101828] text-white font-extrabold text-lg flex items-center justify-center shadow-lg ring-4 ring-white shrink-0">
+              <span class="text-[#42D9F8]">02</span>
+            </div>
+            <div class="bg-[#F8FAFC] rounded-2xl p-5 border border-slate-200/80 flex-1 w-full">
+              <h3 class="text-base font-extrabold text-[#101828] mb-1.5">Choose Your Package</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">Select Basic, Growth, or Pro.</p>
+            </div>
+          </div>
+
+          <div class="relative flex lg:flex-col items-start lg:items-center lg:text-center gap-4">
+            <div class="lg:hidden absolute left-7 top-14 bottom-[-2rem] w-0.5 bg-blue-200"></div>
+            <div class="relative z-10 w-14 h-14 lg:w-16 lg:h-16 rounded-2xl bg-[#101828] text-white font-extrabold text-lg flex items-center justify-center shadow-lg ring-4 ring-white shrink-0">
+              <span class="text-[#42D9F8]">03</span>
+            </div>
+            <div class="bg-[#F8FAFC] rounded-2xl p-5 border border-slate-200/80 flex-1 w-full">
+              <h3 class="text-base font-extrabold text-[#101828] mb-1.5">We Build Your Website</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">Our team designs and develops your website based on your requirements.</p>
+            </div>
+          </div>
+
+          <div class="relative flex lg:flex-col items-start lg:items-center lg:text-center gap-4">
+            <div class="relative z-10 w-14 h-14 lg:w-16 lg:h-16 rounded-2xl bg-[#101828] text-white font-extrabold text-lg flex items-center justify-center shadow-lg ring-4 ring-white shrink-0">
+              <span class="text-[#42D9F8]">04</span>
+            </div>
+            <div class="bg-[#F8FAFC] rounded-2xl p-5 border border-slate-200/80 flex-1 w-full">
+              <h3 class="text-base font-extrabold text-[#101828] mb-1.5">Launch Your Website</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">Review, approve, and launch according to the agreed scope.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       10. WHY CLOWFLOW?
+  ======================================================================= -->
+  <section class="py-20 bg-[#101828] text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center mb-14">
+        <span class="text-xs font-extrabold tracking-widest uppercase text-[#42D9F8]">THE CLOWFLOW ADVANTAGE</span>
+        <h2 class="mt-2 text-3xl sm:text-4xl font-extrabold tracking-tight">
+          Why Businesses Choose ClowFlow.
+        </h2>
+        <p class="mt-3 text-base text-slate-300">
+          Practical benefits built around what Nepalese small and medium businesses actually need.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div class="bg-slate-900/80 border border-slate-800 hover:border-[#3867FF]/60 rounded-2xl p-6 transition-all">
+          <div class="w-10 h-10 rounded-xl bg-[#3867FF]/20 text-[#42D9F8] flex items-center justify-center mb-4">
+            <i data-lucide="shield-check" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-base font-bold mb-1.5">Affordable pricing</h3>
+          <p class="text-xs sm:text-sm text-slate-400">Clear packages starting at NPR 7,000 without hidden agency retainers.</p>
+        </div>
+
+        <div class="bg-slate-900/80 border border-slate-800 hover:border-[#3867FF]/60 rounded-2xl p-6 transition-all">
+          <div class="w-10 h-10 rounded-xl bg-[#3867FF]/20 text-[#42D9F8] flex items-center justify-center mb-4">
+            <i data-lucide="sparkles" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-base font-bold mb-1.5">Professional website design</h3>
+          <p class="text-xs sm:text-sm text-slate-400">Modern layouts that earn visitor trust immediately.</p>
+        </div>
+
+        <div class="bg-slate-900/80 border border-slate-800 hover:border-[#3867FF]/60 rounded-2xl p-6 transition-all">
+          <div class="w-10 h-10 rounded-xl bg-[#3867FF]/20 text-[#42D9F8] flex items-center justify-center mb-4">
+            <i data-lucide="smartphone" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-base font-bold mb-1.5">Mobile-first development</h3>
+          <p class="text-xs sm:text-sm text-slate-400">Smooth experience across phones, tablets, and desktops.</p>
+        </div>
+
+        <div class="bg-slate-900/80 border border-slate-800 hover:border-[#3867FF]/60 rounded-2xl p-6 transition-all">
+          <div class="w-10 h-10 rounded-xl bg-[#3867FF]/20 text-[#42D9F8] flex items-center justify-center mb-4">
+            <i data-lucide="calendar" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-base font-bold mb-1.5">Appointment booking integration</h3>
+          <p class="text-xs sm:text-sm text-slate-400">Structured booking request forms with date &amp; time selection.</p>
+        </div>
+
+        <div class="bg-slate-900/80 border border-slate-800 hover:border-[#3867FF]/60 rounded-2xl p-6 transition-all">
+          <div class="w-10 h-10 rounded-xl bg-[#3867FF]/20 text-[#42D9F8] flex items-center justify-center mb-4">
+            <i data-lucide="message-circle" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-base font-bold mb-1.5">WhatsApp connectivity</h3>
+          <p class="text-xs sm:text-sm text-slate-400">One-tap messaging so customers reach you immediately.</p>
+        </div>
+
+        <div class="bg-slate-900/80 border border-slate-800 hover:border-[#3867FF]/60 rounded-2xl p-6 transition-all">
+          <div class="w-10 h-10 rounded-xl bg-[#3867FF]/20 text-[#42D9F8] flex items-center justify-center mb-4">
+            <i data-lucide="search" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-base font-bold mb-1.5">SEO-friendly structure</h3>
+          <p class="text-xs sm:text-sm text-slate-400">Clean headings, metadata, and mobile structure for search visibility.</p>
+        </div>
+
+        <div class="bg-slate-900/80 border border-slate-800 hover:border-[#3867FF]/60 rounded-2xl p-6 transition-all">
+          <div class="w-10 h-10 rounded-xl bg-[#3867FF]/20 text-[#42D9F8] flex items-center justify-center mb-4">
+            <i data-lucide="layers" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-base font-bold mb-1.5">Personalized business solutions</h3>
+          <p class="text-xs sm:text-sm text-slate-400">Tailored sections for your doctors, services, menu, or products.</p>
+        </div>
+
+        <div class="bg-slate-900/80 border border-slate-800 hover:border-[#3867FF]/60 rounded-2xl p-6 transition-all">
+          <div class="w-10 h-10 rounded-xl bg-[#3867FF]/20 text-[#42D9F8] flex items-center justify-center mb-4">
+            <i data-lucide="heart-handshake" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-base font-bold mb-1.5">Clear communication</h3>
+          <p class="text-xs sm:text-sm text-slate-400">Direct updates on WhatsApp with transparent scope and terms.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       11. PORTFOLIO SECTION (CONCEPTUAL DEMO PROJECTS)
+  ======================================================================= -->
+  <section id="portfolio" class="py-20 lg:py-24 bg-[#F8FAFC]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center mb-10">
+        <span class="text-xs font-extrabold tracking-widest uppercase text-[#3867FF]">CONCEPTUAL SHOWCASE</span>
+        <h2 class="mt-2 text-3xl sm:text-4xl font-extrabold text-[#101828] tracking-tight">
+          Explore What We Can Build.
+        </h2>
+        <p class="mt-3 text-base text-slate-600">
+          Filter conceptual demo projects by industry and click any project to inspect its included features.
+        </p>
+      </div>
+
+      <div id="portfolioFilterBar" class="flex flex-wrap items-center justify-center gap-2 mb-12"></div>
+      <div id="portfolioGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7"></div>
+    </div>
+  </section>
+
+  <!-- Portfolio Concept Modal -->
+  <div id="portfolioModal" onclick="closePortfolioModal()" class="hidden fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-sm flex items-center justify-center p-4">
+    <div id="portfolioModalContent" onclick="event.stopPropagation()" class="bg-white rounded-3xl max-w-xl w-full overflow-hidden shadow-2xl border border-slate-200"></div>
+  </div>
+
+  <!-- ======================================================================
+       12. MULTI-STEP LEAD GENERATION FORM — CRITICAL
+  ======================================================================= -->
+  <section id="inquiry-form" class="py-20 lg:py-28 bg-white border-t border-slate-200/80">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <span class="text-xs font-extrabold tracking-widest uppercase text-[#3867FF]">START YOUR PROJECT</span>
+        <h2 class="mt-2 text-3xl sm:text-4xl font-extrabold text-[#101828] tracking-tight">
+          Let's Build Your Business Website.
+        </h2>
+        <p class="mt-3 text-base text-slate-600 max-w-xl mx-auto">
+          Tell us a little about your business. We'll contact you on WhatsApp to discuss your website.
+        </p>
+      </div>
+
+      <div class="bg-[#F8FAFC] rounded-3xl border border-slate-200/90 shadow-xl shadow-slate-900/5 overflow-hidden">
+        <!-- Step Indicators -->
+        <div class="bg-[#101828] px-5 sm:px-8 py-5 text-white">
+          <div class="grid grid-cols-4 gap-2 sm:gap-4">
+            <div data-step-indicator="1" class="flex flex-col items-center text-center">
+              <div class="step-circle w-8 h-8 rounded-full flex items-center justify-center text-xs font-extrabold mb-1.5 bg-[#3867FF] text-white ring-4 ring-[#3867FF]/30">1</div>
+              <span class="step-label text-[11px] sm:text-xs font-semibold text-white">Business Details</span>
+            </div>
+            <div data-step-indicator="2" class="flex flex-col items-center text-center">
+              <div class="step-circle w-8 h-8 rounded-full flex items-center justify-center text-xs font-extrabold mb-1.5 bg-slate-800 text-slate-400">2</div>
+              <span class="step-label text-[11px] sm:text-xs font-semibold text-slate-400">Requirements</span>
+            </div>
+            <div data-step-indicator="3" class="flex flex-col items-center text-center">
+              <div class="step-circle w-8 h-8 rounded-full flex items-center justify-center text-xs font-extrabold mb-1.5 bg-slate-800 text-slate-400">3</div>
+              <span class="step-label text-[11px] sm:text-xs font-semibold text-slate-400">Contact Details</span>
+            </div>
+            <div data-step-indicator="4" class="flex flex-col items-center text-center">
+              <div class="step-circle w-8 h-8 rounded-full flex items-center justify-center text-xs font-extrabold mb-1.5 bg-slate-800 text-slate-400">4</div>
+              <span class="step-label text-[11px] sm:text-xs font-semibold text-slate-400">Review &amp; Submit</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Confirmation State -->
+        <div id="formConfirmationState" class="hidden p-6 sm:p-10 text-center space-y-6">
+          <div class="w-16 h-16 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
+            <i data-lucide="check-circle-2" class="w-9 h-9"></i>
+          </div>
+          <div class="max-w-lg mx-auto space-y-2">
+            <h3 class="text-2xl font-extrabold text-[#101828]">
+              Your WhatsApp Inquiry Message Is Ready!
+            </h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              We generated your complete project inquiry and opened WhatsApp. <strong>Please press "Send" inside WhatsApp</strong> so our team at <strong>+977 9769022308</strong> receives your request.
+            </p>
+          </div>
+          <div id="confirmedDetailsCard" class="max-w-md mx-auto bg-white border border-slate-200 rounded-2xl p-4 text-left text-xs text-slate-700 space-y-1.5"></div>
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
+            <a
+              id="reopenWhatsAppBtn"
+              href="https://wa.me/9779769022308"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-sm px-6 py-3.5 rounded-xl shadow-lg shadow-emerald-600/20"
+            >
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              <span>Open WhatsApp Again</span>
+            </a>
+            <button
+              type="button"
+              onclick="editSubmittedForm()"
+              class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 font-bold text-sm px-6 py-3.5 rounded-xl cursor-pointer"
+            >
+              <i data-lucide="refresh-cw" class="w-4 h-4"></i>
+              <span>Edit Details</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Multi-Step Form -->
+        <form id="leadForm" class="p-6 sm:p-10" novalidate>
+          <!-- STEP 1 -->
+          <div id="formStep1" class="space-y-5">
+            <div>
+              <h3 class="text-xl font-extrabold text-[#101828]">Step 1 — Business Details</h3>
+              <p class="text-xs sm:text-sm text-slate-500 mt-0.5">Tell us about you and your business.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="fullName" class="block text-xs font-bold text-[#101828] mb-1.5">
+                  Your full name <span class="text-rose-500">*</span>
+                </label>
+                <input id="fullName" type="text" placeholder="e.g., Dr. Anil Shrestha" class="w-full rounded-xl bg-white border border-slate-300 px-4 py-3 text-sm text-[#101828] focus:outline-none focus:ring-2 focus:ring-[#3867FF]" />
+                <p id="err-fullName" class="hidden text-xs text-rose-600 mt-1"></p>
+              </div>
+              <div>
+                <label for="businessName" class="block text-xs font-bold text-[#101828] mb-1.5">
+                  Business name <span class="text-rose-500">*</span>
+                </label>
+                <input id="businessName" type="text" placeholder="e.g., Lumbini Dental Care" class="w-full rounded-xl bg-white border border-slate-300 px-4 py-3 text-sm text-[#101828] focus:outline-none focus:ring-2 focus:ring-[#3867FF]" />
+                <p id="err-businessName" class="hidden text-xs text-rose-600 mt-1"></p>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div>
+                <label for="businessCategory" class="block text-xs font-bold text-[#101828] mb-1.5">
+                  Business category <span class="text-rose-500">*</span>
+                </label>
+                <select id="businessCategory" class="w-full rounded-xl bg-white border border-slate-300 px-3.5 py-3 text-sm text-[#101828] focus:outline-none focus:ring-2 focus:ring-[#3867FF]">
+                  <option value="">Select category...</option>
+                  <option value="Clinic / Hospital">Clinic / Hospital</option>
+                  <option value="Dental Clinic">Dental Clinic</option>
+                  <option value="Pharmacy">Pharmacy</option>
+                  <option value="Beauty Salon">Beauty Salon</option>
+                  <option value="Restaurant / Cafe">Restaurant / Cafe</option>
+                  <option value="Retail Shop">Retail Shop</option>
+                  <option value="Hotel">Hotel</option>
+                  <option value="Consultancy">Consultancy</option>
+                  <option value="Other">Other</option>
+                </select>
+                <p id="err-businessCategory" class="hidden text-xs text-rose-600 mt-1"></p>
+              </div>
+
+              <div>
+                <label for="businessAddress" class="block text-xs font-bold text-[#101828] mb-1.5">
+                  Business address <span class="text-rose-500">*</span>
+                </label>
+                <input id="businessAddress" type="text" placeholder="e.g., New Baneshwor" class="w-full rounded-xl bg-white border border-slate-300 px-4 py-3 text-sm text-[#101828] focus:outline-none focus:ring-2 focus:ring-[#3867FF]" />
+                <p id="err-businessAddress" class="hidden text-xs text-rose-600 mt-1"></p>
+              </div>
+
+              <div>
+                <label for="cityDistrict" class="block text-xs font-bold text-[#101828] mb-1.5">
+                  City / District <span class="text-rose-500">*</span>
+                </label>
+                <input id="cityDistrict" type="text" placeholder="e.g., Kathmandu" class="w-full rounded-xl bg-white border border-slate-300 px-4 py-3 text-sm text-[#101828] focus:outline-none focus:ring-2 focus:ring-[#3867FF]" />
+                <p id="err-cityDistrict" class="hidden text-xs text-rose-600 mt-1"></p>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="existingWebsite" class="block text-xs font-bold text-[#101828] mb-1.5">
+                  Existing website <span class="text-slate-400 font-normal">(optional)</span>
+                </label>
+                <input id="existingWebsite" type="text" placeholder="e.g., www.yourbusiness.com.np" class="w-full rounded-xl bg-white border border-slate-300 px-4 py-3 text-sm text-[#101828] focus:outline-none focus:ring-2 focus:ring-[#3867FF]" />
+              </div>
+              <div>
+                <label for="socialPage" class="block text-xs font-bold text-[#101828] mb-1.5">
+                  Facebook or Instagram page <span class="text-slate-400 font-normal">(optional)</span>
+                </label>
+                <input id="socialPage" type="text" placeholder="e.g., fb.com/yourbusiness" class="w-full rounded-xl bg-white border border-slate-300 px-4 py-3 text-sm text-[#101828] focus:outline-none focus:ring-2 focus:ring-[#3867FF]" />
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 2 -->
+          <div id="formStep2" class="hidden space-y-6">
+            <div>
+              <h3 class="text-xl font-extrabold text-[#101828]">Step 2 — Website Requirements</h3>
+              <p class="text-xs sm:text-sm text-slate-500 mt-0.5">Choose your website type, package, and needed features.</p>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-[#101828] mb-2.5">
+                What type of website do you need? <span class="text-rose-500">*</span>
+              </label>
+              <div id="websiteTypeOptions" class="grid grid-cols-2 sm:grid-cols-3 gap-2.5"></div>
+              <p id="err-websiteType" class="hidden text-xs text-rose-600 mt-1.5"></p>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-[#101828] mb-2.5">
+                Which package interests you? <span class="text-rose-500">*</span>
+              </label>
+              <div id="packageChoiceOptions" class="grid grid-cols-1 sm:grid-cols-2 gap-3"></div>
+              <p id="err-selectedPackage" class="hidden text-xs text-rose-600 mt-1.5"></p>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-[#101828] mb-2.5">
+                Which features do you need? <span class="text-slate-400 font-normal">(Multiple selections allowed)</span>
+              </label>
+              <div id="featureMultiOptions" class="flex flex-wrap gap-2"></div>
+            </div>
+          </div>
+
+          <!-- STEP 3 -->
+          <div id="formStep3" class="hidden space-y-5">
+            <div>
+              <h3 class="text-xl font-extrabold text-[#101828]">Step 3 — Contact Details</h3>
+              <p class="text-xs sm:text-sm text-slate-500 mt-0.5">Enter your WhatsApp number so we can message you.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="whatsappNumber" class="block text-xs font-bold text-[#101828] mb-1.5">
+                  WhatsApp / Mobile number <span class="text-rose-500">*</span>
+                </label>
+                <input id="whatsappNumber" type="tel" placeholder="e.g., 98XXXXXXXX" class="w-full rounded-xl bg-white border border-slate-300 px-4 py-3 text-sm text-[#101828] focus:outline-none focus:ring-2 focus:ring-[#3867FF]" />
+                <p id="err-whatsappNumber" class="hidden text-xs text-rose-600 mt-1"></p>
+              </div>
+              <div>
+                <label for="email" class="block text-xs font-bold text-[#101828] mb-1.5">
+                  Email <span class="text-slate-400 font-normal">(optional)</span>
+                </label>
+                <input id="email" type="email" placeholder="e.g., info@yourbusiness.com" class="w-full rounded-xl bg-white border border-slate-300 px-4 py-3 text-sm text-[#101828] focus:outline-none focus:ring-2 focus:ring-[#3867FF]" />
+              </div>
+            </div>
+
+            <div>
+              <label for="additionalRequirements" class="block text-xs font-bold text-[#101828] mb-1.5">
+                Additional requirements <span class="text-slate-400 font-normal">(optional)</span>
+              </label>
+              <textarea id="additionalRequirements" rows="4" placeholder="Tell us about your pages, services, or any specific ideas..." class="w-full rounded-xl bg-white border border-slate-300 px-4 py-3 text-sm text-[#101828] focus:outline-none focus:ring-2 focus:ring-[#3867FF]"></textarea>
+            </div>
+          </div>
+
+          <!-- STEP 4 -->
+          <div id="formStep4" class="hidden space-y-6">
+            <div>
+              <h3 class="text-xl font-extrabold text-[#101828]">Step 4 — Review and Submit</h3>
+              <p class="text-xs sm:text-sm text-slate-500 mt-0.5">Review your summary below before sending via WhatsApp.</p>
+            </div>
+
+            <div id="reviewSummaryBox" class="bg-white rounded-2xl border border-slate-200 divide-y divide-slate-100 text-sm"></div>
+
+            <div class="bg-emerald-50/80 border border-emerald-200 rounded-2xl p-4 flex items-start gap-3">
+              <i data-lucide="message-circle" class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5"></i>
+              <p class="text-xs sm:text-sm text-emerald-950 leading-relaxed">
+                <strong>Note:</strong> Clicking <em>"Submit My Website Request"</em> opens WhatsApp with your inquiry prefilled. Please press <strong>Send</strong> in WhatsApp to deliver your request to ClowFlow (+977 9769022308).
+              </p>
+            </div>
+
+            <div>
+              <label class="flex items-start gap-3 cursor-pointer">
+                <input id="privacyConsent" type="checkbox" class="mt-1 w-4 h-4 rounded border-slate-300 text-[#3867FF] focus:ring-[#3867FF]" />
+                <span class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  I agree to share these business details with ClowFlow via WhatsApp so the team can contact me regarding my website inquiry.
+                </span>
+              </label>
+              <p id="err-consent" class="hidden text-xs text-rose-600 mt-1.5"></p>
+            </div>
+          </div>
+
+          <!-- Form Footer Controls -->
+          <div class="mt-8 pt-6 border-t border-slate-200 flex items-center justify-between gap-4">
+            <button type="button" id="btnPrevStep" onclick="prevFormStep()" class="hidden px-5 py-3 rounded-xl bg-white border border-slate-300 text-slate-700 hover:bg-slate-100 text-sm font-bold transition-colors cursor-pointer">
+              Back
+            </button>
+            <div id="prevSpacer"></div>
+
+            <button type="button" id="btnNextStep" onclick="nextFormStep()" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-[#3867FF] hover:bg-[#2854E8] text-white text-sm font-bold shadow-lg shadow-blue-600/20 transition-all cursor-pointer">
+              <span>Continue</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+
+            <button type="submit" id="btnSubmitForm" class="hidden inline-flex items-center gap-2 px-7 py-4 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-white text-sm sm:text-base font-extrabold shadow-xl shadow-emerald-600/25 transition-all cursor-pointer">
+              <i data-lucide="send" class="w-4 h-4"></i>
+              <span>Submit My Website Request</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       14. FAQ SECTION
+  ======================================================================= -->
+  <section id="faq" class="py-20 bg-[#F8FAFC] border-t border-slate-200/80">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <span class="text-xs font-extrabold tracking-widest uppercase text-[#3867FF]">FREQUENTLY ASKED QUESTIONS</span>
+        <h2 class="mt-2 text-3xl sm:text-4xl font-extrabold text-[#101828] tracking-tight">
+          Clear Answers Before You Start.
+        </h2>
+      </div>
+
+      <div id="faqAccordionList" class="space-y-3"></div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       15. FINAL CTA SECTION
+  ======================================================================= -->
+  <section class="py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-[#F8FAFC]">
+    <div class="max-w-6xl mx-auto rounded-[32px] bg-gradient-to-br from-[#101828] via-[#15223B] to-[#101828] p-8 sm:p-14 lg:p-16 text-center text-white relative overflow-hidden shadow-2xl">
+      <div class="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-[#3867FF]/25 blur-3xl pointer-events-none"></div>
+      <div class="absolute -bottom-24 -left-24 w-80 h-80 rounded-full bg-[#42D9F8]/20 blur-3xl pointer-events-none"></div>
+
+      <div class="relative z-10 max-w-3xl mx-auto space-y-6">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
+          Your Customers Are Online. Is Your Business?
+        </h2>
+        <p class="text-base sm:text-lg text-slate-300 leading-relaxed">
+          Don't let your competitors have all the attention. Give your business a professional online presence starting at just NPR 7,000.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+          <button
+            type="button"
+            onclick="startInquiry()"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#3867FF] hover:bg-[#4975FF] text-white font-extrabold text-base px-8 py-4 rounded-2xl shadow-xl shadow-blue-600/30 transition-all cursor-pointer"
+          >
+            <span>Get My Website Today</span>
+            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+          </button>
+          <a
+            href="https://wa.me/9779769022308?text=Hello%20ClowFlow!%20I%20am%20interested%20in%20building%20a%20website%20for%20my%20business.%20Please%20share%20more%20details%20about%20your%20packages."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/15 border border-white/20 text-white font-extrabold text-base px-8 py-4 rounded-2xl backdrop-blur-sm transition-all"
+          >
+            <i data-lucide="message-circle" class="w-5 h-5 text-[#25D366]"></i>
+            <span>Chat on WhatsApp</span>
+          </a>
+        </div>
+
+        <div class="pt-6 flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-xs sm:text-sm font-bold text-slate-300">
+          <button type="button" onclick="startInquiry({ packageName: 'Basic — NPR 7,000' })" class="px-4 py-2 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 transition-colors cursor-pointer">
+            Basic: <span class="text-[#42D9F8]">NPR 7,000</span>
+          </button>
+          <button type="button" onclick="startInquiry({ packageName: 'Growth — NPR 10,000' })" class="px-4 py-2 rounded-xl bg-[#3867FF]/25 hover:bg-[#3867FF]/35 border border-[#3867FF]/50 text-white transition-colors cursor-pointer">
+            Growth: <span class="text-[#42D9F8]">NPR 10,000</span>
+          </button>
+          <button type="button" onclick="startInquiry({ packageName: 'Pro — NPR 11,000' })" class="px-4 py-2 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 transition-colors cursor-pointer">
+            Pro: <span class="text-[#42D9F8]">NPR 11,000</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       16. FOOTER
+  ======================================================================= -->
+  <footer class="bg-[#101828] text-slate-300 border-t border-slate-800 pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-slate-800">
+        <div class="space-y-4">
+          <a href="#home" class="inline-flex items-center gap-2.5">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#3867FF] to-[#42D9F8] p-[1.5px]">
+              <div class="w-full h-full rounded-[10.5px] bg-[#101828] flex items-center justify-center overflow-hidden">
+                <img
+                  src="https://i.ibb.co/CpWks7bj/logo.png"
+                  alt="ClowFlow Logo"
+                  class="w-full h-full object-cover"
+                  onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+                />
+                <span style="display:none;" class="w-full h-full items-center justify-center text-[#42D9F8] font-extrabold text-sm">CF</span>
+              </div>
+            </div>
+            <span class="font-extrabold text-xl text-white">Clow<span class="text-[#3867FF]">Flow</span></span>
+          </a>
+          <p class="text-sm font-bold text-white">Your Business. Online. Growing.</p>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Professional websites that help your business attract customers, receive bookings, and grow online across Nepal.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-extrabold uppercase tracking-wider text-white mb-4">Quick Links</h4>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="#home" class="text-slate-400 hover:text-white transition-colors">Home</a></li>
+            <li><a href="#services" class="text-slate-400 hover:text-white transition-colors">Services</a></li>
+            <li><a href="#pricing" class="text-slate-400 hover:text-white transition-colors">Pricing</a></li>
+            <li><a href="#industries" class="text-slate-400 hover:text-white transition-colors">Industries</a></li>
+            <li><a href="#portfolio" class="text-slate-400 hover:text-white transition-colors">Portfolio</a></li>
+            <li><a href="#inquiry-form" class="text-slate-400 hover:text-white transition-colors">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-extrabold uppercase tracking-wider text-white mb-4">Services</h4>
+          <ul class="space-y-2.5 text-sm text-slate-400">
+            <li>Business Website Development</li>
+            <li>Clinic Website Development</li>
+            <li>Appointment Booking Systems</li>
+            <li>E-commerce &amp; Product Catalog Websites</li>
+            <li>Landing Page Development</li>
+          </ul>
+        </div>
+
+        <div class="space-y-3">
+          <h4 class="text-xs font-extrabold uppercase tracking-wider text-white mb-4">Contact</h4>
+          <div class="flex items-center gap-2 text-sm text-slate-300">
+            <i data-lucide="map-pin" class="w-4 h-4 text-[#42D9F8]"></i>
+            <span>Nepal</span>
+          </div>
+          <a
+            href="https://wa.me/9779769022308?text=Hello%20ClowFlow!%20I%20am%20interested%20in%20building%20a%20website%20for%20my%20business.%20Please%20share%20more%20details%20about%20your%20packages."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 text-sm font-bold text-[#25D366] hover:underline"
+          >
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>WhatsApp: +977 9769022308</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <div>© 2026 ClowFlow. All rights reserved.</div>
+        <div>Domain, hosting, paid third-party services, and renewals are subject to agreed package terms.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================================================================
+       13. CRAZY INTERACTIVE CHATBOT & LIVE SERVICE SPOTLIGHT POPUP
+  ======================================================================= -->
+  <div id="cfChatWidget" class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex flex-col items-end gap-3 max-w-[calc(100vw-2rem)]">
+
+    <!-- Dynamic Eye-Catching Service & Sample Business Spotlight Toast -->
+    <div
+      id="cfSpotlightPopup"
+      class="hidden w-[310px] sm:w-[340px] bg-white/95 backdrop-blur-xl border border-slate-200/90 rounded-2xl p-3.5 shadow-2xl shadow-slate-900/15 transition-all duration-300 transform translate-y-0"
+    >
+      <div class="flex items-start justify-between gap-2.5">
+        <div class="flex items-start gap-2.5">
+          <div id="cfSpotIconWrap" class="w-9 h-9 rounded-xl bg-gradient-to-br from-[#3867FF] to-[#42D9F8] text-white flex items-center justify-center shrink-0 shadow-sm mt-0.5">
+            <i data-lucide="sparkles" class="w-4 h-4"></i>
+          </div>
+          <div>
+            <div class="flex items-center gap-1.5">
+              <span id="cfSpotBadge" class="text-[9px] font-extrabold uppercase tracking-wider px-1.5 py-0.5 rounded bg-blue-50 text-[#3867FF]">
+                Sample Showcase
+              </span>
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping"></span>
+            </div>
+            <p id="cfSpotTitle" class="text-xs font-extrabold text-[#101828] mt-1 leading-snug">
+              A Kathmandu Dental Clinic gets its website with online booking!
+            </p>
+            <p id="cfSpotSub" class="text-[11px] text-slate-500 mt-0.5 leading-snug">
+              Includes treatment menu, dentist profiles &amp; WhatsApp button.
+            </p>
+          </div>
+        </div>
+        <button
+          type="button"
+          onclick="dismissSpotlightPopup()"
+          aria-label="Close notification"
+          class="text-slate-400 hover:text-slate-700 p-1 rounded-lg hover:bg-slate-100 transition-colors cursor-pointer shrink-0"
+        >
+          <i data-lucide="x" class="w-3.5 h-3.5"></i>
+        </button>
+      </div>
+      <div class="mt-2.5 pt-2 border-t border-slate-100 flex items-center justify-between gap-2">
+        <button
+          type="button"
+          onclick="openChatFromSpotlight()"
+          class="text-[11px] font-extrabold text-[#3867FF] hover:text-[#2854E8] inline-flex items-center gap-1 cursor-pointer"
+        >
+          <span>Ask ClowFlow Bot</span>
+          <i data-lucide="arrow-right" class="w-3 h-3"></i>
+        </button>
+        <a
+          id="cfSpotWaLink"
+          href="https://wa.me/9779769022308?text=Hello%20ClowFlow!%20I%20saw%20your%20website%20showcase%20and%20would%20like%20to%20build%20a%20website%20for%20my%20business."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-[11px] font-extrabold text-emerald-600 hover:text-emerald-700 inline-flex items-center gap-1"
+        >
+          <i data-lucide="message-circle" class="w-3 h-3"></i>
+          <span>WhatsApp Now</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Expandable Interactive Chatbot Window -->
+    <div
+      id="cfChatWindow"
+      class="hidden w-[340px] sm:w-[380px] bg-white rounded-3xl border border-slate-200/90 shadow-2xl shadow-slate-950/25 overflow-hidden flex flex-col"
+    >
+      <!-- Chatbot Header -->
+      <div class="bg-gradient-to-r from-[#101828] via-[#16233B] to-[#101828] px-4 py-3.5 text-white flex items-center justify-between">
+        <div class="flex items-center gap-2.5">
+          <div class="relative w-10 h-10 rounded-xl bg-gradient-to-br from-[#3867FF] to-[#42D9F8] p-[1.5px] shrink-0">
+            <div class="w-full h-full rounded-[10px] bg-[#101828] flex items-center justify-center overflow-hidden">
+              <img
+                src="https://i.ibb.co/CpWks7bj/logo.png"
+                alt="ClowFlow Bot"
+                class="w-full h-full object-cover"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+              />
+              <span style="display:none;" class="w-full h-full items-center justify-center text-[#42D9F8] font-extrabold text-xs">CF</span>
+            </div>
+            <span class="absolute -bottom-0.5 -right-0.5 w-3 h-3 rounded-full bg-emerald-400 border-2 border-[#101828]"></span>
+          </div>
+          <div>
+            <div class="text-sm font-extrabold flex items-center gap-1.5">
+              <span>ClowFlow Smart Guide</span>
+              <span class="text-[9px] font-bold uppercase px-1.5 py-0.5 rounded bg-[#3867FF]/30 text-[#42D9F8]">Online</span>
+            </div>
+            <div class="text-[11px] text-slate-300">Instant answers &amp; WhatsApp connect</div>
+          </div>
+        </div>
+        <button
+          type="button"
+          onclick="toggleChatWidget(false)"
+          aria-label="Minimize chat"
+          class="p-2 rounded-xl text-slate-300 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
+        >
+          <i data-lucide="chevron-down" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Chat Messages Scroll Area -->
+      <div id="cfChatMessages" class="p-4 space-y-3 max-h-[300px] overflow-y-auto bg-[#F8FAFC] text-xs sm:text-[13px]">
+        <!-- Populated dynamically via JS -->
+      </div>
+
+      <!-- Quick Prompt Chips -->
+      <div class="px-3.5 py-2.5 bg-white border-t border-slate-100">
+        <div class="text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-1.5">Tap to explore services:</div>
+        <div class="flex flex-wrap gap-1.5" id="cfQuickReplies">
+          <button type="button" onclick="handleBotPrompt('pricing')" class="px-2.5 py-1.5 rounded-xl bg-blue-50 hover:bg-blue-100 text-[#3867FF] font-bold text-[11px] transition-colors cursor-pointer">
+            Packages (NPR 7k–11k)
+          </button>
+          <button type="button" onclick="handleBotPrompt('clinic')" class="px-2.5 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-[#101828] font-bold text-[11px] transition-colors cursor-pointer">
+            Clinic &amp; Dental Sites
+          </button>
+          <button type="button" onclick="handleBotPrompt('services')" class="px-2.5 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-[#101828] font-bold text-[11px] transition-colors cursor-pointer">
+            All Our Services
+          </button>
+          <button type="button" onclick="handleBotPrompt('booking')" class="px-2.5 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-[#101828] font-bold text-[11px] transition-colors cursor-pointer">
+            Booking &amp; WhatsApp
+          </button>
+        </div>
+      </div>
+
+      <!-- Custom Message Input -> Sends Directly to WhatsApp -->
+      <form onsubmit="handleCustomChatSubmit(event)" class="p-3 bg-white border-t border-slate-200/80 flex items-center gap-2">
+        <input
+          id="cfChatInput"
+          type="text"
+          placeholder="Type your business name or question..."
+          class="flex-1 bg-slate-100 focus:bg-white border border-transparent focus:border-[#3867FF] rounded-xl px-3.5 py-2.5 text-xs text-[#101828] focus:outline-none transition-colors"
+        />
+        <button
+          type="submit"
+          aria-label="Send to WhatsApp"
+          class="w-10 h-10 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-white flex items-center justify-center shrink-0 shadow-md shadow-emerald-600/20 transition-transform active:scale-95 cursor-pointer"
+        >
+          <i data-lucide="send" class="w-4 h-4"></i>
+        </button>
+      </form>
+
+      <!-- Direct WhatsApp Footer Strip -->
+      <a
+        id="cfDirectWaFooter"
+        href="https://wa.me/9779769022308?text=Hello%20ClowFlow!%20I%20was%20chatting%20with%20your%20website%20assistant%20and%20want%20to%20build%20a%20website%20for%20my%20business."
+        target="_blank"
+        rel="noopener noreferrer"
+        class="bg-emerald-600 hover:bg-emerald-700 text-white py-2.5 px-4 text-xs font-extrabold flex items-center justify-center gap-2 transition-colors"
+      >
+        <i data-lucide="message-circle" class="w-4 h-4"></i>
+        <span>Continue Chat on WhatsApp (+977 9769022308)</span>
+      </a>
+    </div>
+
+    <!-- Floating Launcher Buttons Row -->
+    <div class="flex items-center gap-2.5">
+      <!-- Interactive Chatbot Trigger -->
+      <button
+        type="button"
+        id="cfChatLauncherBtn"
+        onclick="toggleChatWidget()"
+        aria-label="Open ClowFlow Assistant"
+        class="relative group flex items-center gap-2.5 bg-[#101828] hover:bg-[#3867FF] text-white px-4 py-3.5 rounded-full shadow-2xl shadow-slate-950/30 border border-white/10 transition-all duration-300 hover:scale-105 cursor-pointer"
+      >
+        <span class="relative flex h-2.5 w-2.5">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#42D9F8] opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#42D9F8]"></span>
+        </span>
+        <i data-lucide="bot" class="w-5 h-5 text-[#42D9F8] group-hover:text-white transition-colors"></i>
+        <span class="text-xs sm:text-sm font-extrabold">Ask ClowFlow</span>
+        <span id="cfUnreadBadge" class="w-5 h-5 rounded-full bg-rose-500 text-white text-[10px] font-extrabold flex items-center justify-center shadow">
+          1
+        </span>
+      </button>
+
+      <!-- Direct WhatsApp Button -->
+      <a
+        href="https://wa.me/9779769022308?text=Hello%20ClowFlow!%20I%20am%20interested%20in%20building%20a%20website%20for%20my%20business.%20Please%20share%20more%20details%20about%20your%20packages."
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat with ClowFlow on WhatsApp"
+        class="group flex items-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white px-4 py-3.5 rounded-full shadow-2xl shadow-emerald-950/30 transition-all duration-300 hover:scale-105"
+      >
+        <i data-lucide="message-circle" class="w-5 h-5"></i>
+        <span class="hidden md:inline text-sm font-extrabold pr-0.5">WhatsApp</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       JAVASCRIPT: INTERACTIVE STATE, FORM ENGINE, DEMOS, PORTFOLIO & FAQ
+  ======================================================================= -->
+  <script>
+    // ========================================================================
+    // 1. DATA DEFINITIONS
+    // ========================================================================
+    const WHATSAPP_BASE = 'https://wa.me/9779769022308';
+
+    function buildWhatsAppUrl(text) {
+      return `${WHATSAPP_BASE}?text=${encodeURIComponent(text)}`;
+    }
+
+    const INDUSTRIES_DATA = [
+      {
+        title: 'Clinics & Healthcare',
+        categoryValue: 'Clinic / Hospital',
+        icon: 'stethoscope',
+        accent: 'from-blue-600 to-cyan-500',
+        previewTag: 'OPD & Diagnostics',
+        previewHeader: 'CityCare Polyclinic • Kathmandu',
+        previewHighlight: 'Book OPD Consultation Online',
+        summary: 'Build patient trust with clear doctor credentials, department details, and effortless appointment requests.',
+        features: [
+          'Doctor profiles',
+          'Medical services',
+          'Appointment requests',
+          'Opening hours',
+          'Location and directions',
+          'WhatsApp contact',
+        ],
+      },
+      {
+        title: 'Dental Clinics',
+        categoryValue: 'Dental Clinic',
+        icon: 'smile',
+        accent: 'from-sky-500 to-teal-400',
+        previewTag: 'Cosmetic & Family Dentistry',
+        previewHeader: 'PearlSmile Dental Studio • Lalitpur',
+        previewHighlight: 'Root Canal • Braces • Implants',
+        summary: 'Showcase modern dental treatments, dentist profiles, and let patients schedule checkups easily.',
+        features: [
+          'Treatment information',
+          'Dentist profiles',
+          'Appointment booking',
+          'Before-and-after gallery (only with authorized images)',
+        ],
+      },
+      {
+        title: 'Beauty & Salons',
+        categoryValue: 'Beauty Salon',
+        icon: 'scissors',
+        accent: 'from-indigo-500 to-purple-500',
+        previewTag: 'Bridal & Aesthetics',
+        previewHeader: 'Aura Hair & Skin Lounge • Pokhara',
+        previewHighlight: 'Explore Packages & Reserve Slot',
+        summary: 'Turn social media visitors into booked sessions with an organized service menu and lookbook.',
+        features: [
+          'Service menu',
+          'Pricing',
+          'Booking requests',
+          'Portfolio gallery',
+        ],
+      },
+      {
+        title: 'Restaurants & Cafes',
+        categoryValue: 'Restaurant / Cafe',
+        icon: 'utensils',
+        accent: 'from-amber-500 to-orange-500',
+        previewTag: 'Specialty Coffee & Dining',
+        previewHeader: 'Himalayan Roast & Kitchen • Jhamsikhel',
+        previewHighlight: 'View Menu & Reserve a Table',
+        summary: 'Attract hungry diners searching nearby with a fast mobile menu, food photos, and table inquiries.',
+        features: [
+          'Digital menu',
+          'Food gallery',
+          'Location',
+          'Reservations and inquiries',
+        ],
+      },
+      {
+        title: 'Retail & Shops',
+        categoryValue: 'Retail Shop',
+        icon: 'shopping-bag',
+        accent: 'from-emerald-500 to-teal-600',
+        previewTag: 'Apparel & Lifestyle Store',
+        previewHeader: 'Vastra Collective • New Road',
+        previewHighlight: 'Browse Catalog & Order via WhatsApp',
+        summary: 'Display your products cleanly so shoppers can browse items and message you on WhatsApp to order.',
+        features: [
+          'Product catalog',
+          'Product gallery',
+          'WhatsApp inquiries',
+          'Store information',
+        ],
+      },
+      {
+        title: 'Other Businesses',
+        categoryValue: 'Consultancy',
+        icon: 'building-2',
+        accent: 'from-slate-700 to-slate-900',
+        previewTag: 'Consultancies, Hotels & Services',
+        previewHeader: 'Everest Abroad & Career Hub • Putalisadak',
+        previewHighlight: 'Book Free Counseling Session',
+        summary: 'Custom websites for consultancies, hotels, educational institutions, and service providers.',
+        features: [
+          'Custom websites for consultancies, hotels, educational institutions, and service providers',
+          'Service & course breakdowns',
+          'Direct inquiry & consultation forms',
+          'Google Maps & WhatsApp integration',
+        ],
+      },
+    ];
+
+    const PACKAGES_DATA = [
+      {
+        id: 'basic',
+        name: 'ClowFlow Basic',
+        shortName: 'Basic — NPR 7,000',
+        price: 'NPR 7,000',
+        badge: null,
+        popular: false,
+        description: 'Everything you need to establish your business online.',
+        cta: 'Choose Basic',
+        features: [
+          '1–3 website pages',
+          'Professional responsive design',
+          'Business information',
+          'Services section',
+          'Image gallery',
+          'Contact form',
+          'WhatsApp button',
+          'Click-to-call functionality',
+          'Google Maps integration',
+          'Basic SEO setup',
+        ],
+      },
+      {
+        id: 'growth',
+        name: 'ClowFlow Growth',
+        shortName: 'Growth — NPR 10,000',
+        price: 'NPR 10,000',
+        badge: 'MOST POPULAR',
+        popular: true,
+        description: 'More features to attract customers and receive appointment requests.',
+        cta: 'Choose Growth',
+        features: [
+          'Everything in Basic',
+          '4–6 website pages',
+          'Appointment booking system',
+          'Booking request forms',
+          'Preferred date and time selection',
+          'WhatsApp booking integration',
+          'Services and pricing section',
+          'Testimonials section',
+          'Social media integration',
+          'Enhanced SEO setup',
+        ],
+      },
+      {
+        id: 'pro',
+        name: 'ClowFlow Pro',
+        shortName: 'Pro — NPR 11,000',
+        price: 'NPR 11,000',
+        badge: 'BEST VALUE',
+        popular: false,
+        description: 'A complete online experience for growing businesses.',
+        cta: 'Choose Pro',
+        features: [
+          'Everything in Growth',
+          'Up to 8 website pages',
+          'Advanced booking workflow',
+          'Custom booking fields',
+          'Booking management interface where supported',
+          'Email/WhatsApp notifications where configured',
+          'Premium animations',
+          'Advanced contact forms',
+          'Analytics integration',
+          'Enhanced on-page SEO',
+          '30-day priority support',
+        ],
+      },
+    ];
+
+    const COMPARISON_DATA = [
+      { feature: 'Number of Pages', basic: '1–3 Pages', growth: '4–6 Pages', pro: 'Up to 8 Pages' },
+      { feature: 'Professional Responsive Design', basic: true, growth: true, pro: true },
+      { feature: 'WhatsApp Button & Click-to-Call', basic: true, growth: true, pro: true },
+      { feature: 'Google Maps & Contact Form', basic: true, growth: true, pro: true },
+      { feature: 'Appointment Booking System & Request Forms', basic: false, growth: true, pro: true },
+      { feature: 'Preferred Date & Time Selection', basic: false, growth: true, pro: true },
+      { feature: 'WhatsApp Booking Integration', basic: false, growth: true, pro: true },
+      { feature: 'Services & Pricing, Testimonials & Social Links', basic: false, growth: true, pro: true },
+      { feature: 'Advanced Booking Workflow & Custom Fields', basic: false, growth: false, pro: true },
+      { feature: 'Booking Management Interface (where supported)', basic: false, growth: false, pro: true },
+      { feature: 'Email/WhatsApp Notifications (where configured)', basic: false, growth: false, pro: true },
+      { feature: 'Premium Animations & Analytics Integration', basic: false, growth: false, pro: true },
+      { feature: 'SEO Setup', basic: 'Basic SEO', growth: 'Enhanced SEO', pro: 'Enhanced On-Page SEO' },
+      { feature: 'Post-Launch Support', basic: 'Standard Handover', growth: 'Standard Handover', pro: '30-Day Priority Support' },
+    ];
+
+    const DEMOS_DATA = {
+      'medical-demo': {
+        packageFit: 'Growth Package (NPR 10,000)',
+        categoryValue: 'Clinic / Hospital',
+        brandName: 'Sagarmatha Health & Polyclinic',
+        location: 'Maharajgunj, Kathmandu',
+        hours: 'Sun–Fri: 7:00 AM – 7:00 PM',
+        accentColor: '#3867FF',
+        heroTitle: 'Compassionate Family Healthcare & Diagnostics',
+        heroSub: 'Experienced specialists, modern pathology lab, and quick online OPD appointment scheduling.',
+        actionLabel: 'Book Appointment',
+        sectionLabel: 'Key Medical Departments',
+        services: [
+          { name: 'General Physician OPD', detail: 'Daily consultation & preventive checkups', tag: 'OPD' },
+          { name: 'Cardiology & ECG', detail: 'Heart health screening & specialist care', tag: 'Specialist' },
+          { name: 'Pathology & Lab Tests', detail: 'Full blood work & diagnostic reports', tag: 'Lab' },
+        ],
+        highlights: [
+          { title: 'Dr. Ramesh Adhikari', role: 'Senior General Physician (MD)' },
+          { title: 'Dr. Sunita Sharma', role: 'Consultant Pediatrician' },
+        ],
+        ctaLabel: 'Order Similar Clinic Website',
+      },
+      'dental-demo': {
+        packageFit: 'Growth / Pro Package',
+        categoryValue: 'Dental Clinic',
+        brandName: 'BrightSmile Dental & Implant Center',
+        location: 'Jawalakhel, Lalitpur',
+        hours: 'Sun–Sat: 9:00 AM – 6:30 PM',
+        accentColor: '#0EA5E9',
+        heroTitle: 'Modern, Gentle Dental Care for Confident Smiles',
+        heroSub: 'Digital X-rays, painless root canal therapy, orthodontics, and hygienic sterilization standards.',
+        actionLabel: 'Book Dental Visit',
+        sectionLabel: 'Featured Dental Treatments',
+        services: [
+          { name: 'Scaling & Polishing', detail: 'Preventive gum care & ultrasonic cleaning', tag: 'Hygiene' },
+          { name: 'Braces & Clear Aligners', detail: 'Teeth alignment for teens & adults', tag: 'Orthodontics' },
+          { name: 'Dental Implants & Crowns', detail: 'Natural-looking tooth restoration', tag: 'Restorative' },
+        ],
+        highlights: [
+          { title: 'Dr. Anjali Karki', role: 'MDS — Prosthodontist & Implantologist' },
+          { title: 'Dr. Bibek Shrestha', role: 'BDS — Aesthetic & Restorative Dentist' },
+        ],
+        ctaLabel: 'Order Similar Dental Website',
+      },
+      'retail-demo': {
+        packageFit: 'Basic / Growth Package',
+        categoryValue: 'Retail Shop',
+        brandName: 'Koshi Urban Outfitters',
+        location: 'Lakeside, Pokhara & Delivery Across Nepal',
+        hours: 'Open Daily: 10:00 AM – 8:00 PM',
+        accentColor: '#10B981',
+        heroTitle: 'Everyday Essentials & Contemporary Nepalese Craft',
+        heroSub: 'Browse our curated seasonal catalog with transparent pricing and one-tap WhatsApp ordering.',
+        actionLabel: 'Inquire on WhatsApp',
+        sectionLabel: 'Featured Store Products',
+        services: [
+          { name: 'Handloom Cotton Jacket', detail: 'Sizes S, M, L, XL • NPR 3,200', tag: 'New Arrival' },
+          { name: 'Minimalist Leather Tote', detail: 'Handcrafted local leather • NPR 2,850', tag: 'Bestseller' },
+          { name: 'Merino Knit Sweater', detail: 'Lightweight all-season warmth • NPR 2,400', tag: 'Featured' },
+        ],
+        highlights: [
+          { title: 'Kathmandu Valley Delivery', role: 'Same-day & next-day rider dispatch' },
+          { title: 'Nationwide Courier', role: 'Delivery to Pokhara, Chitwan, Butwal & Biratnagar' },
+        ],
+        ctaLabel: 'Order Similar Retail Website',
+      },
+    };
+
+    const PORTFOLIO_DATA = [
+      {
+        id: 'p1',
+        title: 'SwasthyaCare Polyclinic',
+        category: 'Healthcare',
+        categoryValue: 'Clinic / Hospital',
+        subtitle: 'Conceptual demo project for a multi-doctor OPD clinic featuring doctor profiles, appointment requests, and Google Maps directions.',
+        recommendedPkg: 'Growth — NPR 10,000',
+        features: ['Doctor Directory', 'OPD Request Form', 'WhatsApp Contact', 'Department Pages'],
+        palette: 'from-blue-600 to-cyan-500',
+      },
+      {
+        id: 'p2',
+        title: 'Dentique Aesthetics & Care',
+        category: 'Dental',
+        categoryValue: 'Dental Clinic',
+        subtitle: 'Conceptual demo project for a modern dental clinic with treatment guides, dentist bios, and date/time booking.',
+        recommendedPkg: 'Growth — NPR 10,000',
+        features: ['Treatment Guides', 'Dentist Profiles', 'Date/Time Booking', 'Authorized Gallery Layout'],
+        palette: 'from-sky-500 to-indigo-600',
+      },
+      {
+        id: 'p3',
+        title: 'Noor Bridal & Beauty Studio',
+        category: 'Beauty & Wellness',
+        categoryValue: 'Beauty Salon',
+        subtitle: 'Conceptual demo project for a beauty salon featuring a transparent service & price menu and bridal package inquiries.',
+        recommendedPkg: 'Growth — NPR 10,000',
+        features: ['Service & Price Menu', 'Portfolio Gallery', 'Session Booking', 'Social Media Links'],
+        palette: 'from-purple-600 to-pink-500',
+      },
+      {
+        id: 'p4',
+        title: 'Thakali & Chulo Kitchen',
+        category: 'Restaurants',
+        categoryValue: 'Restaurant / Cafe',
+        subtitle: 'Conceptual demo project for a restaurant & cafe with a mobile-first digital menu, food gallery, and table reservation form.',
+        recommendedPkg: 'Basic — NPR 7,000',
+        features: ['Digital Menu', 'Food Gallery', 'Table Inquiry Form', 'Google Maps Pin'],
+        palette: 'from-amber-500 to-red-500',
+      },
+      {
+        id: 'p5',
+        title: 'Pashmina & Loom House',
+        category: 'Retail',
+        categoryValue: 'Retail Shop',
+        subtitle: 'Conceptual demo project for a retail shop allowing shoppers to browse products and send WhatsApp inquiries.',
+        recommendedPkg: 'Pro — NPR 11,000',
+        features: ['Product Catalog', 'Product Gallery', 'WhatsApp Inquiries', 'Store Information'],
+        palette: 'from-emerald-600 to-teal-500',
+      },
+      {
+        id: 'p6',
+        title: 'Apex Global Study Consultancy',
+        category: 'Corporate',
+        categoryValue: 'Consultancy',
+        subtitle: 'Conceptual demo project for an educational consultancy with destination guides and counseling session booking.',
+        recommendedPkg: 'Pro — NPR 11,000',
+        features: ['Service Listings', 'Counseling Booking', 'Custom Inquiry Fields', 'Enhanced On-Page SEO'],
+        palette: 'from-slate-800 to-blue-900',
+      },
+    ];
+
+    const FAQ_DATA = [
+      {
+        q: 'How much does a business website cost?',
+        a: 'Our website packages start at NPR 7,000, with Growth at NPR 10,000 and Pro at NPR 11,000.',
+      },
+      {
+        q: 'Can you build a website for my clinic?',
+        a: 'Yes. We can build clinic websites with doctor profiles, medical services, appointment request forms, contact information, and WhatsApp integration.',
+      },
+      {
+        q: 'Can customers book appointments through my website?',
+        a: 'Yes. Our Growth and Pro packages include appointment booking functionality according to their respective features.',
+      },
+      {
+        q: 'Will my website work on mobile phones?',
+        a: 'Yes. Our websites are designed to work across mobile phones, tablets, and desktop devices.',
+      },
+      {
+        q: 'Can customers contact me through WhatsApp?',
+        a: 'Yes. We can integrate WhatsApp contact and booking inquiry functionality.',
+      },
+      {
+        q: 'Do I need technical knowledge?',
+        a: 'No. We help you understand the website and its basic usage.',
+      },
+      {
+        q: 'How long does website development take?',
+        a: 'Delivery time depends on the selected package, project requirements, and how quickly content and feedback are provided.',
+      },
+      {
+        q: 'Is domain and hosting included?',
+        a: 'Domain and hosting inclusions depend on the agreed package. Any renewal or additional charges will be explained before starting.',
+      },
+      {
+        q: 'Can I update my website later?',
+        a: 'Yes. Additional changes and maintenance can be arranged.',
+      },
+      {
+        q: 'How do I get started?',
+        a: 'Select a package or complete the inquiry form. We will contact you through WhatsApp.',
+      },
+    ];
+
+    const WEBSITE_TYPES = [
+      'Clinic / Hospital',
+      'Dental Clinic',
+      'Pharmacy',
+      'Beauty Salon',
+      'Restaurant / Cafe',
+      'Retail Shop',
+      'Hotel',
+      'Consultancy',
+      'Other',
+    ];
+
+    const PACKAGE_CHOICES = [
+      { label: 'Basic — NPR 7,000', sub: '1–3 pages • Essential online presence' },
+      { label: 'Growth — NPR 10,000', sub: '4–6 pages • Appointment booking + WhatsApp' },
+      { label: 'Pro — NPR 11,000', sub: 'Up to 8 pages • Advanced workflow & priority support' },
+      { label: 'Not sure — Recommend one for me', sub: 'We will suggest the best fit on WhatsApp' },
+    ];
+
+    const FEATURE_CHOICES = [
+      'Appointment booking',
+      'WhatsApp integration',
+      'Contact form',
+      'Product catalog',
+      'Service listing',
+      'Online payments',
+      'Google Maps',
+      'Image gallery',
+      'Other',
+    ];
+
+    // ========================================================================
+    // 2. APPLICATION STATE
+    // ========================================================================
+    let currentDemoId = 'medical-demo';
+    let currentDemoViewport = 'desktop';
+    let currentPortfolioFilter = 'All';
+    let openFaqIndex = 0;
+
+    let currentFormStep = 1;
+    const leadState = {
+      fullName: '',
+      businessName: '',
+      businessCategory: '',
+      businessAddress: '',
+      cityDistrict: '',
+      existingWebsite: '',
+      socialPage: '',
+      websiteType: '',
+      selectedPackage: 'Growth — NPR 10,000',
+      features: ['WhatsApp integration', 'Contact form'],
+      whatsappNumber: '',
+      email: '',
+      additionalRequirements: '',
+      consent: false,
+    };
+
+    // ========================================================================
+    // 3. RENDER FUNCTIONS
+    // ========================================================================
+    function renderIndustries() {
+      const grid = document.getElementById('industriesGrid');
+      grid.innerHTML = INDUSTRIES_DATA.map((ind) => `
+        <div class="bg-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:shadow-slate-900/5 transition-all duration-300 flex flex-col overflow-hidden group">
+          <div class="bg-gradient-to-r ${ind.accent} p-5 text-white">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-[10px] font-bold uppercase tracking-wider bg-white/20 backdrop-blur-sm px-2.5 py-1 rounded-full">
+                ${ind.previewTag}
+              </span>
+              <div class="w-9 h-9 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                <i data-lucide="${ind.icon}" class="w-5 h-5 text-white"></i>
+              </div>
+            </div>
+            <div class="bg-white/15 backdrop-blur-md rounded-xl p-3 border border-white/20">
+              <div class="text-xs font-bold truncate">${ind.previewHeader}</div>
+              <div class="text-[11px] text-white/90 mt-0.5 flex items-center justify-between">
+                <span>${ind.previewHighlight}</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col">
+            <h3 class="text-xl font-extrabold text-[#101828] mb-2">${ind.title}</h3>
+            <p class="text-sm text-slate-600 mb-5 leading-relaxed">${ind.summary}</p>
+            <ul class="space-y-2.5 mb-6 flex-1">
+              ${ind.features
+                .map(
+                  (f) => `
+                <li class="flex items-start gap-2.5 text-sm text-slate-700">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-[#3867FF] shrink-0 mt-0.5"></i>
+                  <span>${f}</span>
+                </li>`
+                )
+                .join('')}
+            </ul>
+            <button
+              type="button"
+              onclick="startInquiry({ businessCategory: '${ind.categoryValue}' })"
+              class="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-[#101828] group-hover:bg-[#3867FF] text-white text-sm font-bold transition-colors duration-300 cursor-pointer"
+            >
+              <span>Build My Website</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function renderPricing() {
+      const cardsGrid = document.getElementById('pricingCardsGrid');
+      cardsGrid.innerHTML = PACKAGES_DATA.map((pkg) => {
+        const waMsg = `Hello ClowFlow! I would like to inquire about the ${pkg.name} (${pkg.price}) package for my business.`;
+        return `
+          <div class="relative rounded-3xl p-8 flex flex-col transition-all duration-300 ${
+            pkg.popular
+              ? 'bg-[#101828] text-white shadow-2xl shadow-blue-950/25 ring-4 ring-[#3867FF] lg:-translate-y-4'
+              : 'bg-[#F8FAFC] text-[#101828] border border-slate-200/90 shadow-sm hover:shadow-xl'
+          }">
+            ${
+              pkg.badge
+                ? `<div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full text-xs font-extrabold tracking-wider uppercase shadow-md ${
+                    pkg.popular
+                      ? 'bg-gradient-to-r from-[#3867FF] to-[#42D9F8] text-white'
+                      : 'bg-[#101828] text-[#42D9F8]'
+                  }">${pkg.badge}</div>`
+                : ''
+            }
+            <div class="mb-6">
+              <h3 class="text-lg font-extrabold uppercase tracking-wide ${
+                pkg.popular ? 'text-[#42D9F8]' : 'text-[#3867FF]'
+              }">${pkg.name}</h3>
+              <div class="mt-3 flex items-baseline gap-2">
+                <span class="text-4xl sm:text-5xl font-extrabold tracking-tight">${pkg.price}</span>
+              </div>
+              <p class="mt-3 text-sm leading-relaxed ${
+                pkg.popular ? 'text-slate-300' : 'text-slate-600'
+              }">${pkg.description}</p>
+            </div>
+            <div class="h-px w-full mb-6 ${pkg.popular ? 'bg-slate-800' : 'bg-slate-200'}"></div>
+            <ul class="space-y-3.5 mb-8 flex-1">
+              ${pkg.features
+                .map(
+                  (feat) => `
+                <li class="flex items-start gap-3 text-sm">
+                  <div class="w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5 ${
+                    pkg.popular ? 'bg-[#3867FF]/30 text-[#42D9F8]' : 'bg-blue-100 text-[#3867FF]'
+                  }">
+                    <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                  </div>
+                  <span class="${pkg.popular ? 'text-slate-200' : 'text-slate-700'}">${feat}</span>
+                </li>`
+                )
+                .join('')}
+            </ul>
+            <div class="space-y-3">
+              <button
+                type="button"
+                onclick="startInquiry({ packageName: '${pkg.shortName}' })"
+                class="w-full py-4 px-6 rounded-2xl font-extrabold text-sm sm:text-base transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer ${
+                  pkg.popular
+                    ? 'bg-[#3867FF] hover:bg-[#4975FF] text-white shadow-lg shadow-blue-600/30'
+                    : 'bg-[#101828] hover:bg-[#3867FF] text-white'
+                }"
+              >
+                <span>${pkg.cta}</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </button>
+              <a
+                href="${buildWhatsAppUrl(waMsg)}"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="w-full py-2.5 px-4 rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 transition-colors ${
+                  pkg.popular
+                    ? 'text-slate-300 hover:text-white hover:bg-slate-800/80'
+                    : 'text-slate-600 hover:text-[#101828] hover:bg-slate-200/60'
+                }"
+              >
+                <i data-lucide="message-circle" class="w-3.5 h-3.5 text-emerald-500"></i>
+                <span>Ask about ${pkg.name} on WhatsApp</span>
+              </a>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      const tbody = document.getElementById('comparisonTableBody');
+      tbody.innerHTML = COMPARISON_DATA.map((row) => {
+        const renderCell = (val, isGrowth) => {
+          let inner = '';
+          if (typeof val === 'boolean') {
+            inner = val
+              ? '<i data-lucide="check" class="w-5 h-5 text-emerald-600 mx-auto"></i>'
+              : '<span class="text-slate-300 font-bold">—</span>';
+          } else {
+            inner = `<span class="text-xs font-bold text-[#101828]">${val}</span>`;
+          }
+          return `<td class="py-3.5 px-5 text-center ${isGrowth ? 'bg-blue-50/40 font-semibold' : ''}">${inner}</td>`;
+        };
+        return `
+          <tr class="hover:bg-slate-50/70 transition-colors">
+            <td class="py-3.5 px-6 font-medium text-slate-700">${row.feature}</td>
+            ${renderCell(row.basic, false)}
+            ${renderCell(row.growth, true)}
+            ${renderCell(row.pro, false)}
+          </tr>
+        `;
+      }).join('');
+    }
+
+    // ========================================================================
+    // 4. INTERACTIVE DEMOS ENGINE
+    // ========================================================================
+    function renderDemoPreview(showToast = false) {
+      const demo = DEMOS_DATA[currentDemoId];
+      const frame = document.getElementById('demoBrowserFrame');
+      const content = document.getElementById('demoViewportContent');
+      const pkgBadge = document.getElementById('demoPackageBadge');
+      const orderBtn = document.getElementById('demoOrderBtn');
+      const orderBtnText = document.getElementById('demoOrderBtnText');
+
+      if (currentDemoViewport === 'mobile') {
+        frame.className = 'mx-auto transition-all duration-500 bg-white overflow-hidden max-w-[390px] rounded-[36px] border-[8px] border-[#101828] shadow-2xl';
+      } else {
+        frame.className = 'mx-auto transition-all duration-500 bg-white border border-slate-200/90 shadow-2xl overflow-hidden w-full rounded-3xl';
+      }
+
+      pkgBadge.textContent = demo.packageFit;
+      orderBtnText.textContent = demo.ctaLabel;
+      orderBtn.onclick = () => startInquiry({ businessCategory: demo.categoryValue });
+
+      const gridColsServices = currentDemoViewport === 'mobile' ? 'grid-cols-1' : 'grid-cols-1 sm:grid-cols-3';
+      const gridColsHighlights = currentDemoViewport === 'mobile' ? 'grid-cols-1' : 'grid-cols-1 sm:grid-cols-2';
+
+      content.innerHTML = `
+        <div class="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-slate-200/80">
+          <div>
+            <div class="text-base sm:text-lg font-extrabold text-[#101828]">${demo.brandName}</div>
+            <div class="text-xs text-slate-500 flex items-center gap-1.5 mt-0.5">
+              <i data-lucide="map-pin" class="w-3.5 h-3.5 text-[#3867FF]"></i>
+              <span>${demo.location}</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="hidden sm:inline-flex items-center gap-1 text-xs font-semibold text-slate-600 bg-slate-100 px-3 py-1.5 rounded-lg">
+              <i data-lucide="clock" class="w-3.5 h-3.5"></i>
+              <span>${demo.hours}</span>
+            </span>
+            <button
+              type="button"
+              onclick="renderDemoPreview(true)"
+              style="background-color: ${demo.accentColor}"
+              class="text-white text-xs font-bold px-4 py-2 rounded-xl shadow-sm hover:opacity-90 transition-opacity cursor-pointer"
+            >
+              ${demo.actionLabel}
+            </button>
+          </div>
+        </div>
+
+        ${
+          showToast
+            ? `<div class="bg-emerald-50 border border-emerald-200 text-emerald-900 rounded-2xl p-3.5 flex items-center justify-between gap-3">
+                <div class="flex items-center gap-2.5 text-xs sm:text-sm font-medium">
+                  <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-600 shrink-0"></i>
+                  <span><strong>Interactive Demo Preview:</strong> On your live website, clicking this opens your booking form or connects directly to your WhatsApp!</span>
+                </div>
+                <button type="button" onclick="renderDemoPreview(false)" class="text-xs font-bold text-emerald-700 hover:underline shrink-0 cursor-pointer">Dismiss</button>
+              </div>`
+            : ''
+        }
+
+        <div class="bg-white rounded-2xl p-5 sm:p-6 border border-slate-200/80 shadow-sm">
+          <span style="color: ${demo.accentColor}" class="text-[11px] font-extrabold uppercase tracking-wider">
+            SAMPLE LAYOUT • DEMONSTRATION CONTENT
+          </span>
+          <h3 class="mt-1 text-xl sm:text-2xl font-extrabold text-[#101828]">${demo.heroTitle}</h3>
+          <p class="mt-2 text-sm text-slate-600 max-w-2xl">${demo.heroSub}</p>
+        </div>
+
+        <div>
+          <div class="text-xs font-extrabold uppercase tracking-wider text-slate-400 mb-3">${demo.sectionLabel}</div>
+          <div class="grid gap-3.5 ${gridColsServices}">
+            ${demo.services
+              .map(
+                (srv) => `
+              <div class="bg-white rounded-xl p-4 border border-slate-200/80 hover:border-blue-300 transition-colors">
+                <span class="inline-block text-[10px] font-bold px-2 py-0.5 rounded bg-slate-100 text-slate-700 mb-2">${srv.tag}</span>
+                <div class="text-sm font-extrabold text-[#101828]">${srv.name}</div>
+                <div class="text-xs text-slate-500 mt-1">${srv.detail}</div>
+              </div>`
+              )
+              .join('')}
+          </div>
+        </div>
+
+        <div class="grid gap-3.5 ${gridColsHighlights}">
+          ${demo.highlights
+            .map(
+              (hl) => `
+            <div class="bg-slate-50 rounded-xl p-3.5 border border-slate-200/70 flex items-center justify-between">
+              <div>
+                <div class="text-xs font-extrabold text-[#101828]">${hl.title}</div>
+                <div class="text-[11px] text-slate-500">${hl.role}</div>
+              </div>
+              <span class="text-[11px] font-bold text-[#3867FF]">Demo Info</span>
+            </div>`
+            )
+            .join('')}
+        </div>
+      `;
+
+      lucide.createIcons();
+    }
+
+    function selectDemo(demoId) {
+      currentDemoId = demoId;
+      document.querySelectorAll('.demo-tab-btn').forEach((btn) => {
+        if (btn.dataset.demo === demoId) {
+          btn.className = 'demo-tab-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer bg-[#101828] text-white shadow-sm';
+        } else {
+          btn.className = 'demo-tab-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer text-slate-600 hover:text-[#101828] hover:bg-slate-100';
+        }
+      });
+      renderDemoPreview(false);
+    }
+
+    function setDemoViewport(mode) {
+      currentDemoViewport = mode;
+      const btnDesktop = document.getElementById('btnDesktopView');
+      const btnMobile = document.getElementById('btnMobileView');
+      if (mode === 'desktop') {
+        btnDesktop.className = 'inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer bg-[#3867FF] text-white';
+        btnMobile.className = 'inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer text-slate-600 hover:bg-slate-100';
+      } else {
+        btnMobile.className = 'inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer bg-[#3867FF] text-white';
+        btnDesktop.className = 'inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer text-slate-600 hover:bg-slate-100';
+      }
+      renderDemoPreview(false);
+    }
+
+    // ========================================================================
+    // 5. PORTFOLIO FILTER & MODAL PREVIEW
+    // ========================================================================
+    function renderPortfolio() {
+      const categories = ['All', 'Healthcare', 'Dental', 'Beauty & Wellness', 'Restaurants', 'Retail', 'Corporate'];
+      const filterBar = document.getElementById('portfolioFilterBar');
+      filterBar.innerHTML = categories
+        .map(
+          (cat) => `
+        <button
+          type="button"
+          onclick="filterPortfolio('${cat}')"
+          class="px-4 py-2 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer ${
+            currentPortfolioFilter === cat
+              ? 'bg-[#3867FF] text-white shadow-md shadow-blue-600/20'
+              : 'bg-white text-slate-600 border border-slate-200 hover:border-slate-300 hover:text-[#101828]'
+          }"
+        >
+          ${cat}
+        </button>`
+        )
+        .join('');
+
+      const items =
+        currentPortfolioFilter === 'All'
+          ? PORTFOLIO_DATA
+          : PORTFOLIO_DATA.filter((p) => p.category === currentPortfolioFilter);
+
+      const grid = document.getElementById('portfolioGrid');
+      grid.innerHTML = items
+        .map(
+          (item) => `
+        <div class="bg-white rounded-3xl border border-slate-200/90 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group">
+          <div class="bg-gradient-to-br ${item.palette} p-6 text-white relative">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-[10px] font-extrabold uppercase tracking-wider bg-black/25 backdrop-blur-sm px-2.5 py-1 rounded-full">
+                DEMO CONCEPT • ${item.category}
+              </span>
+              <button
+                type="button"
+                onclick="openPortfolioModal('${item.id}')"
+                aria-label="Preview ${item.title}"
+                class="w-8 h-8 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center transition-colors cursor-pointer"
+              >
+                <i data-lucide="eye" class="w-4 h-4 text-white"></i>
+              </button>
+            </div>
+            <div class="bg-white rounded-xl p-3.5 text-[#101828] shadow-lg transform group-hover:scale-[1.02] transition-transform duration-300">
+              <div class="flex items-center gap-1 mb-2">
+                <span class="w-2 h-2 rounded-full bg-rose-400"></span>
+                <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                <span class="ml-2 text-[9px] text-slate-400 font-semibold">Conceptual Demo</span>
+              </div>
+              <div class="text-sm font-extrabold truncate">${item.title}</div>
+              <div class="mt-2 flex flex-wrap gap-1">
+                ${item.features
+                  .slice(0, 2)
+                  .map(
+                    (f) => `<span class="text-[10px] font-semibold bg-slate-100 text-slate-700 px-2 py-0.5 rounded">${f}</span>`
+                  )
+                  .join('')}
+              </div>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col">
+            <h3 class="text-lg font-extrabold text-[#101828] mb-2">${item.title}</h3>
+            <p class="text-sm text-slate-600 leading-relaxed mb-4 flex-1">${item.subtitle}</p>
+            <div class="text-xs font-bold text-[#3867FF] mb-4">Recommended: ${item.recommendedPkg}</div>
+            <div class="flex items-center gap-2.5 pt-3 border-t border-slate-100">
+              <button
+                type="button"
+                onclick="openPortfolioModal('${item.id}')"
+                class="flex-1 py-2.5 px-3 rounded-xl border border-slate-200 hover:bg-slate-50 text-xs font-bold text-[#101828] transition-colors cursor-pointer"
+              >
+                Preview Concept
+              </button>
+              <button
+                type="button"
+                onclick="startInquiry({ businessCategory: '${item.categoryValue}', packageName: '${item.recommendedPkg}' })"
+                class="flex-1 py-2.5 px-3 rounded-xl bg-[#101828] hover:bg-[#3867FF] text-white text-xs font-bold transition-colors cursor-pointer"
+              >
+                Request Similar
+              </button>
+            </div>
+          </div>
+        </div>`
+        )
+        .join('');
+
+      lucide.createIcons();
+    }
+
+    function filterPortfolio(category) {
+      currentPortfolioFilter = category;
+      renderPortfolio();
+    }
+
+    function openPortfolioModal(id) {
+      const item = PORTFOLIO_DATA.find((p) => p.id === id);
+      if (!item) return;
+      const modal = document.getElementById('portfolioModal');
+      const box = document.getElementById('portfolioModalContent');
+      const waMsg = `Hello ClowFlow! I liked the "${item.title}" demo concept (${item.category}) and would like to discuss a similar website for my business.`;
+
+      box.innerHTML = `
+        <div class="bg-gradient-to-r ${item.palette} p-6 text-white flex items-start justify-between">
+          <div>
+            <span class="inline-block text-[10px] font-extrabold uppercase tracking-wider bg-black/25 px-2.5 py-1 rounded-full mb-2">
+              CONCEPTUAL DEMO PROJECT • ${item.category}
+            </span>
+            <h3 class="text-2xl font-extrabold">${item.title}</h3>
+          </div>
+          <button type="button" onclick="closePortfolioModal()" class="p-2 rounded-xl bg-white/20 hover:bg-white/30 text-white cursor-pointer" aria-label="Close Preview">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+        <div class="p-6 space-y-5">
+          <p class="text-sm text-slate-600 leading-relaxed">${item.subtitle}</p>
+          <div>
+            <div class="text-xs font-extrabold uppercase tracking-wider text-slate-400 mb-2.5">Included Concept Sections</div>
+            <div class="grid grid-cols-2 gap-2.5">
+              ${item.features
+                .map(
+                  (feat) => `
+                <div class="flex items-center gap-2 text-xs font-bold text-[#101828] bg-slate-50 border border-slate-200/80 rounded-xl p-2.5">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-[#3867FF] shrink-0"></i>
+                  <span>${feat}</span>
+                </div>`
+                )
+                .join('')}
+            </div>
+          </div>
+          <div class="bg-blue-50 border border-blue-200/80 rounded-xl p-3.5 text-xs text-slate-700">
+            <strong>Note:</strong> This is a conceptual demonstration designed by ClowFlow to illustrate layout structure and features. Your live website will feature your actual business branding, text, and photos.
+          </div>
+          <div class="flex flex-col sm:flex-row gap-3 pt-2">
+            <button
+              type="button"
+              onclick="closePortfolioModal(); startInquiry({ businessCategory: '${item.categoryValue}', packageName: '${item.recommendedPkg}' });"
+              class="flex-1 py-3.5 px-5 rounded-xl bg-[#3867FF] hover:bg-[#2854E8] text-white text-sm font-bold flex items-center justify-center gap-2 cursor-pointer"
+            >
+              <span>Build a Website Like This</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+            <a
+              href="${buildWhatsAppUrl(waMsg)}"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="py-3.5 px-5 rounded-xl bg-emerald-50 text-emerald-700 border border-emerald-200 text-sm font-bold flex items-center justify-center gap-2"
+            >
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              <span>Ask on WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      `;
+
+      modal.classList.remove('hidden');
+      lucide.createIcons();
+    }
+
+    function closePortfolioModal() {
+      document.getElementById('portfolioModal').classList.add('hidden');
+    }
+
+    // ========================================================================
+    // 6. MULTI-STEP LEAD GENERATION FORM ENGINE
+    // ========================================================================
+    function renderStep2Options() {
+      const typeContainer = document.getElementById('websiteTypeOptions');
+      typeContainer.innerHTML = WEBSITE_TYPES.map((type) => {
+        const selected = leadState.websiteType === type;
+        return `
+          <button
+            type="button"
+            onclick="selectWebsiteType('${type}')"
+            class="py-2.5 px-3 rounded-xl text-xs font-bold border text-left transition-all cursor-pointer ${
+              selected
+                ? 'bg-[#3867FF] text-white border-[#3867FF] shadow-sm'
+                : 'bg-white text-slate-700 border-slate-200 hover:border-slate-300'
+            }"
+          >
+            ${type}
+          </button>`;
+      }).join('');
+
+      const pkgContainer = document.getElementById('packageChoiceOptions');
+      pkgContainer.innerHTML = PACKAGE_CHOICES.map((opt) => {
+        const selected = leadState.selectedPackage === opt.label;
+        return `
+          <button
+            type="button"
+            onclick="selectFormPackage('${opt.label}')"
+            class="p-3.5 rounded-2xl border text-left transition-all cursor-pointer ${
+              selected
+                ? 'bg-[#101828] text-white border-[#101828] shadow-md'
+                : 'bg-white text-[#101828] border-slate-200 hover:border-[#3867FF]/50'
+            }"
+          >
+            <div class="text-xs sm:text-sm font-extrabold">${opt.label}</div>
+            <div class="text-[11px] mt-0.5 ${selected ? 'text-slate-300' : 'text-slate-500'}">${opt.sub}</div>
+          </button>`;
+      }).join('');
+
+      const featContainer = document.getElementById('featureMultiOptions');
+      featContainer.innerHTML = FEATURE_CHOICES.map((feat) => {
+        const checked = leadState.features.includes(feat);
+        return `
+          <button
+            type="button"
+            onclick="toggleFormFeature('${feat}')"
+            class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold border transition-all cursor-pointer ${
+              checked
+                ? 'bg-blue-50 text-[#3867FF] border-[#3867FF]'
+                : 'bg-white text-slate-600 border-slate-200 hover:border-slate-300'
+            }"
+          >
+            <i data-lucide="check" class="w-3.5 h-3.5 ${checked ? 'opacity-100' : 'opacity-25'}"></i>
+            <span>${feat}</span>
+          </button>`;
+      }).join('');
+
+      lucide.createIcons();
+    }
+
+    function selectWebsiteType(type) {
+      leadState.websiteType = type;
+      clearFieldError('websiteType');
+      renderStep2Options();
+    }
+
+    function selectFormPackage(pkgLabel) {
+      leadState.selectedPackage = pkgLabel;
+      clearFieldError('selectedPackage');
+      renderStep2Options();
+    }
+
+    function toggleFormFeature(feat) {
+      if (leadState.features.includes(feat)) {
+        leadState.features = leadState.features.filter((f) => f !== feat);
+      } else {
+        leadState.features.push(feat);
+      }
+      renderStep2Options();
+    }
+
+    function syncInputsToState() {
+      leadState.fullName = document.getElementById('fullName').value;
+      leadState.businessName = document.getElementById('businessName').value;
+      leadState.businessCategory = document.getElementById('businessCategory').value;
+      leadState.businessAddress = document.getElementById('businessAddress').value;
+      leadState.cityDistrict = document.getElementById('cityDistrict').value;
+      leadState.existingWebsite = document.getElementById('existingWebsite').value;
+      leadState.socialPage = document.getElementById('socialPage').value;
+      leadState.whatsappNumber = document.getElementById('whatsappNumber').value;
+      leadState.email = document.getElementById('email').value;
+      leadState.additionalRequirements = document.getElementById('additionalRequirements').value;
+      leadState.consent = document.getElementById('privacyConsent').checked;
+    }
+
+    function showFieldError(fieldId, msg) {
+      const el = document.getElementById(`err-${fieldId}`);
+      if (el) {
+        el.textContent = msg;
+        el.classList.remove('hidden');
+      }
+    }
+
+    function clearFieldError(fieldId) {
+      const el = document.getElementById(`err-${fieldId}`);
+      if (el) {
+        el.textContent = '';
+        el.classList.add('hidden');
+      }
+    }
+
+    function validateCurrentStep(step) {
+      syncInputsToState();
+      let valid = true;
+
+      if (step === 1) {
+        ['fullName', 'businessName', 'businessCategory', 'businessAddress', 'cityDistrict'].forEach(clearFieldError);
+        if (!leadState.fullName.trim()) {
+          showFieldError('fullName', 'Please enter your full name.');
+          valid = false;
+        }
+        if (!leadState.businessName.trim()) {
+          showFieldError('businessName', 'Please enter your business name.');
+          valid = false;
+        }
+        if (!leadState.businessCategory) {
+          showFieldError('businessCategory', 'Please select your business category.');
+          valid = false;
+        }
+        if (!leadState.businessAddress.trim()) {
+          showFieldError('businessAddress', 'Please enter your business address.');
+          valid = false;
+        }
+        if (!leadState.cityDistrict.trim()) {
+          showFieldError('cityDistrict', 'Please enter your city or district.');
+          valid = false;
+        }
+        if (valid && !leadState.websiteType) {
+          leadState.websiteType = leadState.businessCategory;
+        }
+      }
+
+      if (step === 2) {
+        ['websiteType', 'selectedPackage'].forEach(clearFieldError);
+        if (!leadState.websiteType) {
+          showFieldError('websiteType', 'Please select the type of website you need.');
+          valid = false;
+        }
+        if (!leadState.selectedPackage) {
+          showFieldError('selectedPackage', 'Please select a package option.');
+          valid = false;
+        }
+      }
+
+      if (step === 3) {
+        clearFieldError('whatsappNumber');
+        const digits = leadState.whatsappNumber.replace(/[\s\-+]/g, '');
+        if (!digits || digits.length < 7) {
+          showFieldError('whatsappNumber', 'Please enter a valid WhatsApp or mobile number.');
+          valid = false;
+        }
+      }
+
+      if (step === 4) {
+        clearFieldError('consent');
+        if (!leadState.consent) {
+          showFieldError('consent', 'Please agree to share these details via WhatsApp to submit your inquiry.');
+          valid = false;
+        }
+      }
+
+      return valid;
+    }
+
+    function renderReviewSummary() {
+      syncInputsToState();
+      const box = document.getElementById('reviewSummaryBox');
+      box.innerHTML = `
+        <div class="p-4 flex flex-col sm:flex-row sm:justify-between gap-1">
+          <span class="text-slate-500 font-medium">Contact &amp; Business</span>
+          <span class="font-bold text-[#101828]">${escapeHtml(leadState.fullName)} — ${escapeHtml(leadState.businessName)}</span>
+        </div>
+        <div class="p-4 flex flex-col sm:flex-row sm:justify-between gap-1">
+          <span class="text-slate-500 font-medium">Category &amp; Location</span>
+          <span class="font-bold text-[#101828]">${escapeHtml(leadState.businessCategory)} • ${escapeHtml(leadState.businessAddress)}, ${escapeHtml(leadState.cityDistrict)}</span>
+        </div>
+        ${
+          leadState.existingWebsite.trim() || leadState.socialPage.trim()
+            ? `<div class="p-4 flex flex-col sm:flex-row sm:justify-between gap-1">
+                <span class="text-slate-500 font-medium">Online Links</span>
+                <span class="font-semibold text-[#101828] sm:text-right">${[leadState.existingWebsite.trim(), leadState.socialPage.trim()].filter(Boolean).map(escapeHtml).join(' | ')}</span>
+              </div>`
+            : ''
+        }
+        <div class="p-4 flex flex-col sm:flex-row sm:justify-between gap-1">
+          <span class="text-slate-500 font-medium">Website Type</span>
+          <span class="font-bold text-[#101828]">${escapeHtml(leadState.websiteType)}</span>
+        </div>
+        <div class="p-4 flex flex-col sm:flex-row sm:justify-between gap-1">
+          <span class="text-slate-500 font-medium">Selected Package</span>
+          <span class="font-extrabold text-[#3867FF]">${escapeHtml(leadState.selectedPackage)}</span>
+        </div>
+        <div class="p-4 flex flex-col sm:flex-row sm:justify-between gap-1">
+          <span class="text-slate-500 font-medium">Needed Features</span>
+          <span class="font-semibold text-[#101828] sm:text-right max-w-md">${
+            leadState.features.length ? leadState.features.map(escapeHtml).join(', ') : 'Standard package inclusions'
+          }</span>
+        </div>
+        <div class="p-4 flex flex-col sm:flex-row sm:justify-between gap-1">
+          <span class="text-slate-500 font-medium">WhatsApp / Mobile</span>
+          <span class="font-bold text-[#101828]">${escapeHtml(leadState.whatsappNumber)} ${leadState.email.trim() ? `(${escapeHtml(leadState.email.trim())})` : ''}</span>
+        </div>
+        ${
+          leadState.additionalRequirements.trim()
+            ? `<div class="p-4 flex flex-col sm:flex-row sm:justify-between gap-1">
+                <span class="text-slate-500 font-medium">Additional Notes</span>
+                <span class="text-slate-700 sm:text-right max-w-md">${escapeHtml(leadState.additionalRequirements.trim())}</span>
+              </div>`
+            : ''
+        }
+      `;
+    }
+
+    function updateFormStepUI() {
+      for (let i = 1; i <= 4; i++) {
+        const stepEl = document.getElementById(`formStep${i}`);
+        if (i === currentFormStep) {
+          stepEl.classList.remove('hidden');
+        } else {
+          stepEl.classList.add('hidden');
+        }
+
+        const indicator = document.querySelector(`[data-step-indicator="${i}"]`);
+        const circle = indicator.querySelector('.step-circle');
+        const label = indicator.querySelector('.step-label');
+
+        if (i < currentFormStep) {
+          circle.className = 'step-circle w-8 h-8 rounded-full flex items-center justify-center text-xs font-extrabold mb-1.5 bg-emerald-500 text-white';
+          circle.innerHTML = '✓';
+          label.className = 'step-label text-[11px] sm:text-xs font-semibold text-white';
+        } else if (i === currentFormStep) {
+          circle.className = 'step-circle w-8 h-8 rounded-full flex items-center justify-center text-xs font-extrabold mb-1.5 bg-[#3867FF] text-white ring-4 ring-[#3867FF]/30';
+          circle.textContent = i;
+          label.className = 'step-label text-[11px] sm:text-xs font-semibold text-white';
+        } else {
+          circle.className = 'step-circle w-8 h-8 rounded-full flex items-center justify-center text-xs font-extrabold mb-1.5 bg-slate-800 text-slate-400';
+          circle.textContent = i;
+          label.className = 'step-label text-[11px] sm:text-xs font-semibold text-slate-400';
+        }
+      }
+
+      const btnPrev = document.getElementById('btnPrevStep');
+      const prevSpacer = document.getElementById('prevSpacer');
+      const btnNext = document.getElementById('btnNextStep');
+      const btnSubmit = document.getElementById('btnSubmitForm');
+
+      if (currentFormStep > 1) {
+        btnPrev.classList.remove('hidden');
+        prevSpacer.classList.add('hidden');
+      } else {
+        btnPrev.classList.add('hidden');
+        prevSpacer.classList.remove('hidden');
+      }
+
+      if (currentFormStep < 4) {
+        btnNext.classList.remove('hidden');
+        btnSubmit.classList.add('hidden');
+      } else {
+        btnNext.classList.add('hidden');
+        btnSubmit.classList.remove('hidden');
+      }
+
+      if (currentFormStep === 2) renderStep2Options();
+      if (currentFormStep === 4) renderReviewSummary();
+    }
+
+    function nextFormStep() {
+      if (validateCurrentStep(currentFormStep)) {
+        currentFormStep = Math.min(4, currentFormStep + 1);
+        updateFormStepUI();
+      }
+    }
+
+    function prevFormStep() {
+      currentFormStep = Math.max(1, currentFormStep - 1);
+      updateFormStepUI();
+    }
+
+    function startInquiry(options = {}) {
+      if (options.packageName) {
+        leadState.selectedPackage = options.packageName;
+      }
+      if (options.businessCategory) {
+        leadState.businessCategory = options.businessCategory;
+        leadState.websiteType = options.businessCategory;
+        document.getElementById('businessCategory').value = options.businessCategory;
+      }
+
+      document.getElementById('leadForm').classList.remove('hidden');
+      document.getElementById('formConfirmationState').classList.add('hidden');
+      currentFormStep = 1;
+      updateFormStepUI();
+      renderStep2Options();
+
+      const target = document.getElementById('inquiry-form');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    function editSubmittedForm() {
+      document.getElementById('formConfirmationState').classList.add('hidden');
+      document.getElementById('leadForm').classList.remove('hidden');
+      currentFormStep = 1;
+      updateFormStepUI();
+    }
+
+    function handleLeadFormSubmit(e) {
+      e.preventDefault();
+      if (!validateCurrentStep(4)) return;
+
+      const lines = [
+        'Hello ClowFlow! I would like to request a website for my business.',
+        '',
+        '*1. BUSINESS DETAILS*',
+        `• Full Name: ${leadState.fullName.trim()}`,
+        `• Business Name: ${leadState.businessName.trim()}`,
+        `• Category: ${leadState.businessCategory}`,
+        `• Address: ${leadState.businessAddress.trim()}`,
+        `• City / District: ${leadState.cityDistrict.trim()}`,
+        leadState.existingWebsite.trim() ? `• Existing Website: ${leadState.existingWebsite.trim()}` : null,
+        leadState.socialPage.trim() ? `• Facebook / Instagram: ${leadState.socialPage.trim()}` : null,
+        '',
+        '*2. WEBSITE REQUIREMENTS*',
+        `• Website Type: ${leadState.websiteType}`,
+        `• Selected Package / Budget: ${leadState.selectedPackage}`,
+        `• Needed Features: ${leadState.features.length ? leadState.features.join(', ') : 'Standard package features'}`,
+        '',
+        '*3. CONTACT DETAILS*',
+        `• WhatsApp / Mobile: ${leadState.whatsappNumber.trim()}`,
+        leadState.email.trim() ? `• Email: ${leadState.email.trim()}` : null,
+        leadState.additionalRequirements.trim() ? `• Additional Notes: ${leadState.additionalRequirements.trim()}` : null,
+      ].filter(Boolean);
+
+      const waUrl = buildWhatsAppUrl(lines.join('\n'));
+
+      document.getElementById('reopenWhatsAppBtn').href = waUrl;
+      document.getElementById('confirmedDetailsCard').innerHTML = `
+        <div><strong>Business:</strong> ${escapeHtml(leadState.businessName)} (${escapeHtml(leadState.businessCategory)})</div>
+        <div><strong>Location:</strong> ${escapeHtml(leadState.businessAddress)}, ${escapeHtml(leadState.cityDistrict)}</div>
+        <div><strong>Selected Package:</strong> ${escapeHtml(leadState.selectedPackage)}</div>
+        <div><strong>WhatsApp Contact:</strong> ${escapeHtml(leadState.whatsappNumber)}</div>
+      `;
+
+      document.getElementById('leadForm').classList.add('hidden');
+      document.getElementById('formConfirmationState').classList.remove('hidden');
+
+      for (let i = 1; i <= 4; i++) {
+        const indicator = document.querySelector(`[data-step-indicator="${i}"]`);
+        if (indicator) {
+          const circle = indicator.querySelector('.step-circle');
+          if (circle) {
+            circle.className = 'step-circle w-8 h-8 rounded-full flex items-center justify-center text-xs font-extrabold mb-1.5 bg-emerald-500 text-white';
+            circle.innerHTML = '✓';
+          }
+        }
+      }
+
+      if (window.lucide) lucide.createIcons();
+      window.open(waUrl, '_blank', 'noopener,noreferrer');
+    }
+
+    // ========================================================================
+    // 7. FAQ ACCORDION ENGINE
+    // ========================================================================
+    function renderFaq() {
+      const container = document.getElementById('faqAccordionList');
+      if (!container) return;
+      container.innerHTML = FAQ_DATA.map((item, idx) => {
+        const isOpen = openFaqIndex === idx;
+        return `
+          <div class="bg-white rounded-2xl border border-slate-200/90 overflow-hidden shadow-sm">
+            <button
+              type="button"
+              onclick="toggleFaq(${idx})"
+              aria-expanded="${isOpen}"
+              class="w-full px-6 py-4 text-left flex items-center justify-between gap-4 hover:bg-slate-50/80 transition-colors cursor-pointer"
+            >
+              <span class="text-sm sm:text-base font-extrabold text-[#101828]">${item.q}</span>
+              <div class="w-8 h-8 rounded-xl flex items-center justify-center shrink-0 transition-colors ${
+                isOpen ? 'bg-[#3867FF] text-white' : 'bg-slate-100 text-slate-600'
+              }">
+                <i data-lucide="${isOpen ? 'chevron-up' : 'chevron-down'}" class="w-4 h-4"></i>
+              </div>
+            </button>
+            ${
+              isOpen
+                ? `<div class="px-6 pb-5 pt-1 text-sm text-slate-600 leading-relaxed border-t border-slate-100">${item.a}</div>`
+                : ''
+            }
+          </div>`;
+      }).join('');
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function toggleFaq(idx) {
+      openFaqIndex = openFaqIndex === idx ? -1 : idx;
+      renderFaq();
+    }
+
+    // ========================================================================
+    // 8. MOBILE MENU, SCROLL EFFECTS & HELPERS
+    // ========================================================================
+    function escapeHtml(str) {
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    function closeMobileMenu() {
+      const mobileMenuDrawer = document.getElementById('mobileMenuDrawer');
+      const menuIconOpen = document.getElementById('menuIconOpen');
+      const menuIconClose = document.getElementById('menuIconClose');
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      if (mobileMenuDrawer) mobileMenuDrawer.classList.add('hidden');
+      if (menuIconOpen) menuIconOpen.classList.remove('hidden');
+      if (menuIconClose) menuIconClose.classList.add('hidden');
+      if (mobileMenuBtn) mobileMenuBtn.setAttribute('aria-expanded', 'false');
+    }
+
+    window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('navbar');
+      if (!navbar) return;
+      if (window.scrollY > 20) {
+        navbar.classList.add('shadow-sm', 'py-3');
+        navbar.classList.remove('py-4');
+      } else {
+        navbar.classList.remove('shadow-sm', 'py-3');
+        navbar.classList.add('py-4');
+      }
+    });
+
+    // ========================================================================
+    // 8B. CRAZY INTERACTIVE CHATBOT & SERVICE SPOTLIGHT POPUPS
+    // ========================================================================
+    const SPOTLIGHT_MESSAGES = [
+      {
+        badge: 'Demo Use Case • Healthcare',
+        title: 'A Clinic gets its website with OPD booking!',
+        sub: 'Doctor profiles, medical services & 1-tap WhatsApp requests.',
+        waText: 'Hello ClowFlow! I want a Clinic website with appointment booking like your showcase.',
+      },
+      {
+        badge: 'Demo Use Case • Dental',
+        title: 'A Dental Clinic gets its website with slot booking!',
+        sub: 'Treatment menu, dentist info & preferred date/time selection.',
+        waText: 'Hello ClowFlow! I want a Dental Clinic website with booking functionality.',
+      },
+      {
+        badge: 'ClowFlow Service • NPR 7,000',
+        title: 'Launch your Business Website starting at NPR 7,000!',
+        sub: 'Mobile-friendly design, Google Maps, contact form & WhatsApp button.',
+        waText: 'Hello ClowFlow! Tell me more about the Basic Website Package (NPR 7,000).',
+      },
+      {
+        badge: 'Demo Use Case • Retail & Salons',
+        title: 'A Retail Shop & Salon gets its digital catalog!',
+        sub: 'Showcase products, pricing menus & take orders via WhatsApp.',
+        waText: 'Hello ClowFlow! I want a website with a product/service catalog and WhatsApp inquiries.',
+      },
+      {
+        badge: 'Most Popular • NPR 10,000',
+        title: 'Upgrade to Growth Package with Appointment Booking!',
+        sub: '4–6 pages, booking forms, testimonials & social media links.',
+        waText: 'Hello ClowFlow! I am interested in the Growth Package (NPR 10,000).',
+      },
+    ];
+
+    let spotlightIndex = 0;
+    let spotlightDismissed = false;
+    let chatIsOpen = false;
+    let spotlightTimer = null;
+
+    function showNextSpotlight() {
+      if (chatIsOpen || spotlightDismissed) return;
+      const popup = document.getElementById('cfSpotlightPopup');
+      const item = SPOTLIGHT_MESSAGES[spotlightIndex % SPOTLIGHT_MESSAGES.length];
+      spotlightIndex++;
+
+      document.getElementById('cfSpotBadge').textContent = item.badge;
+      document.getElementById('cfSpotTitle').textContent = item.title;
+      document.getElementById('cfSpotSub').textContent = item.sub;
+      document.getElementById('cfSpotWaLink').href = buildWhatsAppUrl(item.waText);
+
+      popup.classList.remove('hidden');
+      lucide.createIcons();
+    }
+
+    function dismissSpotlightPopup() {
+      spotlightDismissed = true;
+      document.getElementById('cfSpotlightPopup').classList.add('hidden');
+    }
+
+    function openChatFromSpotlight() {
+      document.getElementById('cfSpotlightPopup').classList.add('hidden');
+      toggleChatWidget(true);
+    }
+
+    function appendChatMessage(sender, htmlContent, waCtaText = null) {
+      const box = document.getElementById('cfChatMessages');
+      const wrapper = document.createElement('div');
+      wrapper.className = sender === 'user' ? 'flex justify-end' : 'flex justify-start';
+
+      const bubble = document.createElement('div');
+      bubble.className =
+        sender === 'user'
+          ? 'bg-[#3867FF] text-white rounded-2xl rounded-br-sm px-3.5 py-2.5 max-w-[85%] shadow-sm leading-relaxed'
+          : 'bg-white border border-slate-200/90 text-[#101828] rounded-2xl rounded-bl-sm px-3.5 py-2.5 max-w-[88%] shadow-sm leading-relaxed space-y-2';
+
+      bubble.innerHTML = htmlContent;
+
+      if (waCtaText && sender === 'bot') {
+        const waBtn = document.createElement('a');
+        waBtn.href = buildWhatsAppUrl(waCtaText);
+        waBtn.target = '_blank';
+        waBtn.rel = 'noopener noreferrer';
+        waBtn.className =
+          'mt-2 inline-flex items-center gap-1.5 bg-[#25D366] hover:bg-[#20bd5a] text-white font-extrabold text-[11px] px-3 py-1.5 rounded-xl transition-colors';
+        waBtn.innerHTML = '<i data-lucide="message-circle" class="w-3.5 h-3.5"></i><span>Chat on WhatsApp Now</span>';
+        bubble.appendChild(waBtn);
+      }
+
+      wrapper.appendChild(bubble);
+      box.appendChild(wrapper);
+      box.scrollTop = box.scrollHeight;
+      lucide.createIcons();
+    }
+
+    function initChatConversation() {
+      const box = document.getElementById('cfChatMessages');
+      if (box.children.length > 0) return;
+      appendChatMessage(
+        'bot',
+        `<div><strong>Namaste! Welcome to ClowFlow 👋</strong></div>
+         <div class="text-slate-600">We build modern, mobile-friendly websites for clinics, salons, restaurants &amp; shops across Nepal starting at <strong>NPR 7,000</strong>. How can we help your business grow?</div>`,
+        'Hello ClowFlow! I want to discuss building a website for my business.'
+      );
+    }
+
+    function toggleChatWidget(forceState = null) {
+      chatIsOpen = forceState !== null ? forceState : !chatIsOpen;
+      const win = document.getElementById('cfChatWindow');
+      const popup = document.getElementById('cfSpotlightPopup');
+      const badge = document.getElementById('cfUnreadBadge');
+
+      if (chatIsOpen) {
+        initChatConversation();
+        win.classList.remove('hidden');
+        popup.classList.add('hidden');
+        if (badge) badge.classList.add('hidden');
+      } else {
+        win.classList.add('hidden');
+      }
+      lucide.createIcons();
+    }
+
+    function handleBotPrompt(topic) {
+      if (topic === 'pricing') {
+        appendChatMessage('user', 'Tell me about your website packages & prices.');
+        setTimeout(() => {
+          appendChatMessage(
+            'bot',
+            `<div><strong>Our Transparent Packages:</strong></div>
+             <ul class="text-slate-600 space-y-1 list-disc pl-4">
+               <li><strong>Basic (NPR 7,000):</strong> 1–3 pages, gallery, maps &amp; WhatsApp button.</li>
+               <li><strong>Growth (NPR 10,000):</strong> 4–6 pages + Appointment Booking System.</li>
+               <li><strong>Pro (NPR 11,000):</strong> Up to 8 pages + custom booking fields &amp; 30-day priority support.</li>
+             </ul>`,
+            'Hello ClowFlow! I would like help choosing between Basic (NPR 7,000), Growth (NPR 10,000), and Pro (NPR 11,000).'
+          );
+        }, 250);
+      } else if (topic === 'clinic') {
+        appendChatMessage('user', 'Can you build a Clinic or Dental website?');
+        setTimeout(() => {
+          appendChatMessage(
+            'bot',
+            `<div><strong>Yes! Built for Healthcare &amp; Dental Clinics:</strong></div>
+             <div class="text-slate-600">We include doctor/dentist profiles, treatments, opening hours, Google Maps, and online appointment booking with preferred date &amp; time selection.</div>`,
+            'Hello ClowFlow! I am interested in a Clinic / Dental website with appointment booking.'
+          );
+        }, 250);
+      } else if (topic === 'services') {
+        appendChatMessage('user', 'What services does ClowFlow offer?');
+        setTimeout(() => {
+          appendChatMessage(
+            'bot',
+            `<div><strong>ClowFlow Digital Solutions:</strong></div>
+             <ul class="text-slate-600 space-y-1 list-disc pl-4">
+               <li>Business &amp; Corporate Websites</li>
+               <li>Clinic &amp; Dental Booking Websites</li>
+               <li>Salon &amp; Restaurant Digital Menus</li>
+               <li>Retail Product Catalogs with WhatsApp Order</li>
+               <li>SEO-Ready Landing Pages</li>
+             </ul>`,
+            'Hello ClowFlow! I would like to discuss your website development services for my business.'
+          );
+        }, 250);
+      } else if (topic === 'booking') {
+        appendChatMessage('user', 'How do WhatsApp & Appointment Booking work?');
+        setTimeout(() => {
+          appendChatMessage(
+            'bot',
+            `<div><strong>Instant Customer Inquiries:</strong></div>
+             <div class="text-slate-600">Visitors pick their preferred service, date, and time on your website and send booking requests directly—or tap one button to message your business on WhatsApp.</div>`,
+            'Hello ClowFlow! I want to add WhatsApp integration and appointment booking to my business website.'
+          );
+        }, 250);
+      }
+    }
+
+    function handleCustomChatSubmit(e) {
+      e.preventDefault();
+      const input = document.getElementById('cfChatInput');
+      const text = input.value.trim();
+      if (!text) return;
+
+      appendChatMessage('user', escapeHtml(text));
+      input.value = '';
+
+      const waMessage = `Hello ClowFlow! I messaged via your website assistant: "${text}"`;
+      setTimeout(() => {
+        appendChatMessage(
+          'bot',
+          `<div>Great! Tap below to send <strong>"${escapeHtml(text)}"</strong> directly to our team on WhatsApp for a fast response:</div>`,
+          waMessage
+        );
+      }, 250);
+    }
+
+    // ========================================================================
+    // 9. INITIALIZE ON LOAD
+    // ========================================================================
+    document.addEventListener('DOMContentLoaded', () => {
+      const leadFormEl = document.getElementById('leadForm');
+      if (leadFormEl) {
+        leadFormEl.addEventListener('submit', handleLeadFormSubmit);
+      }
+
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const mobileMenuDrawer = document.getElementById('mobileMenuDrawer');
+      const menuIconOpen = document.getElementById('menuIconOpen');
+      const menuIconClose = document.getElementById('menuIconClose');
+
+      if (mobileMenuBtn && mobileMenuDrawer) {
+        mobileMenuBtn.addEventListener('click', () => {
+          const isHidden = mobileMenuDrawer.classList.contains('hidden');
+          if (isHidden) {
+            mobileMenuDrawer.classList.remove('hidden');
+            if (menuIconOpen) menuIconOpen.classList.add('hidden');
+            if (menuIconClose) menuIconClose.classList.remove('hidden');
+            mobileMenuBtn.setAttribute('aria-expanded', 'true');
+          } else {
+            closeMobileMenu();
+          }
+        });
+      }
+
+      renderIndustries();
+      renderPricing();
+      renderDemoPreview(false);
+      renderPortfolio();
+      renderStep2Options();
+      renderFaq();
+      if (window.lucide) lucide.createIcons();
+
+      // Show first eye-catching service/use-case spotlight popup after 2.5s, then cycle every 9s
+      setTimeout(() => {
+        showNextSpotlight();
+        spotlightTimer = setInterval(showNextSpotlight, 9000);
+      }, 2500);
+    });
+  </script>
+</body>
+</html>

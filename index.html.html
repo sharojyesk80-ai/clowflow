@@ -55,11 +55,16 @@
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <style>
+    html, body {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
     body {
       font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
       background-color: #F8FAFC;
       color: #101828;
-      overflow-x: hidden;
+      -webkit-tap-highlight-color: transparent;
     }
 
     /* Subtle architectural dot grid */
@@ -93,15 +98,15 @@
     }
   </style>
 </head>
-<body class="antialiased selection:bg-[#3867FF] selection:text-white">
+<body class="antialiased selection:bg-[#3867FF] selection:text-white pb-20 sm:pb-0">
 
   <!-- ======================================================================
        3. STICKY NAVIGATION BAR
   ======================================================================= -->
-  <header id="navbar" class="fixed top-0 inset-x-0 z-40 bg-white/85 backdrop-blur-xl border-b border-slate-200/70 py-4 transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-      <a href="#home" class="inline-flex items-center gap-2.5 group focus:outline-none">
-        <div class="relative w-10 h-10 rounded-xl bg-gradient-to-br from-[#3867FF] to-[#42D9F8] p-[1.5px] shadow-md shadow-blue-500/20">
+  <header id="navbar" class="fixed top-0 inset-x-0 z-40 bg-white/90 backdrop-blur-xl border-b border-slate-200/70 py-3.5 sm:py-4 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-2">
+      <a href="#home" class="inline-flex items-center gap-2 sm:gap-2.5 group focus:outline-none min-w-0">
+        <div class="relative w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-[#3867FF] to-[#42D9F8] p-[1.5px] shadow-md shadow-blue-500/20 shrink-0">
           <div class="w-full h-full rounded-[10.5px] bg-[#101828] flex items-center justify-center overflow-hidden">
             <img
               src="https://i.ibb.co/CpWks7bj/logo.png"
@@ -112,11 +117,11 @@
             <span style="display:none;" class="w-full h-full items-center justify-center text-[#42D9F8] font-extrabold text-sm">CF</span>
           </div>
         </div>
-        <div class="flex flex-col">
-          <span class="font-extrabold text-xl tracking-tight leading-none text-[#101828]">
+        <div class="flex flex-col min-w-0">
+          <span class="font-extrabold text-lg sm:text-xl tracking-tight leading-none text-[#101828]">
             Clow<span class="text-[#3867FF]">Flow</span>
           </span>
-          <span class="text-[10px] font-semibold tracking-wider uppercase mt-0.5 text-slate-500">
+          <span class="text-[9px] sm:text-[10px] font-semibold tracking-wider uppercase mt-0.5 text-slate-500 truncate">
             Your Business. Online. Growing.
           </span>
         </div>
@@ -201,20 +206,20 @@
   <!-- ======================================================================
        4. HERO SECTION — HIGH-CONVERTING
   ======================================================================= -->
-  <section id="home" class="relative pt-28 pb-20 lg:pt-36 lg:pb-28 overflow-hidden bg-dot-grid">
-    <div class="absolute -top-32 right-0 w-[520px] h-[520px] rounded-full bg-gradient-to-br from-[#3867FF]/15 via-[#42D9F8]/15 to-transparent blur-3xl pointer-events-none"></div>
-    <div class="absolute bottom-0 -left-24 w-[420px] h-[420px] rounded-full bg-gradient-to-tr from-[#42D9F8]/15 to-transparent blur-3xl pointer-events-none"></div>
+  <section id="home" class="relative pt-24 pb-16 sm:pt-28 sm:pb-20 lg:pt-36 lg:pb-28 overflow-hidden bg-dot-grid">
+    <div class="absolute -top-32 right-0 w-[300px] sm:w-[520px] h-[300px] sm:h-[520px] rounded-full bg-gradient-to-br from-[#3867FF]/15 via-[#42D9F8]/15 to-transparent blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-0 -left-24 w-[260px] sm:w-[420px] h-[260px] sm:h-[420px] rounded-full bg-gradient-to-tr from-[#42D9F8]/15 to-transparent blur-3xl pointer-events-none"></div>
 
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-10 items-center">
         <!-- Left Copy -->
-        <div class="lg:col-span-6 space-y-6">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200/80 text-[#3867FF] text-xs font-extrabold tracking-wider uppercase">
-            <span class="w-2 h-2 rounded-full bg-[#3867FF] animate-pulse"></span>
+        <div class="lg:col-span-6 space-y-5 sm:space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 border border-blue-200/80 text-[#3867FF] text-[10px] sm:text-xs font-extrabold tracking-wider uppercase">
+            <span class="w-2 h-2 rounded-full bg-[#3867FF] animate-pulse shrink-0"></span>
             <span>WEBSITE DEVELOPMENT FOR NEPALESE BUSINESSES</span>
           </div>
 
-          <h1 class="text-4xl sm:text-5xl lg:text-[52px] font-extrabold tracking-tight text-[#101828] leading-[1.12]">
+          <h1 class="text-3xl sm:text-5xl lg:text-[52px] font-extrabold tracking-tight text-[#101828] leading-[1.14]">
             Your Business Deserves More Than Just a Facebook Page.
             <span class="block mt-1 bg-gradient-to-r from-[#3867FF] to-[#0EA5E9] bg-clip-text text-transparent">
               Get Your Own Professional Website.
@@ -288,24 +293,24 @@
                 <span class="text-[10px] font-semibold uppercase tracking-wider text-[#42D9F8]">Demo</span>
               </div>
 
-              <div class="p-5 sm:p-6 bg-gradient-to-b from-blue-50/60 to-white">
-                <div class="flex items-center justify-between pb-4 border-b border-slate-100">
-                  <div class="flex items-center gap-2.5">
-                    <div class="w-8 h-8 rounded-lg bg-[#3867FF] text-white flex items-center justify-center">
+              <div class="p-4 sm:p-6 bg-gradient-to-b from-blue-50/60 to-white">
+                <div class="flex items-center justify-between gap-2 pb-4 border-b border-slate-100">
+                  <div class="flex items-center gap-2.5 min-w-0">
+                    <div class="w-8 h-8 rounded-lg bg-[#3867FF] text-white flex items-center justify-center shrink-0">
                       <i data-lucide="stethoscope" class="w-4 h-4"></i>
                     </div>
-                    <div>
-                      <div class="text-xs font-extrabold text-[#101828]">CityCare Medical Clinic</div>
-                      <div class="text-[10px] text-slate-500">Kathmandu • Open 7 AM – 7 PM</div>
+                    <div class="min-w-0">
+                      <div class="text-xs font-extrabold text-[#101828] truncate">CityCare Medical Clinic</div>
+                      <div class="text-[10px] text-slate-500 truncate">Kathmandu • Open 7 AM – 7 PM</div>
                     </div>
                   </div>
-                  <span class="bg-[#3867FF] text-white text-[11px] font-bold px-3 py-1.5 rounded-lg">
+                  <span class="bg-[#3867FF] text-white text-[10px] sm:text-[11px] font-bold px-2.5 sm:px-3 py-1.5 rounded-lg shrink-0">
                     Book OPD
                   </span>
                 </div>
 
-                <div class="py-4 grid grid-cols-12 gap-4 items-center">
-                  <div class="col-span-7 space-y-2">
+                <div class="py-4 grid grid-cols-1 sm:grid-cols-12 gap-4 items-center">
+                  <div class="sm:col-span-7 space-y-2">
                     <span class="inline-block text-[10px] font-bold uppercase tracking-wider text-[#3867FF] bg-blue-100/70 px-2 py-0.5 rounded">
                       Healthcare &amp; Diagnostics
                     </span>
@@ -316,7 +321,7 @@
                       View doctor timings, check departments, and request your visit online.
                     </p>
                   </div>
-                  <div class="col-span-5 bg-white border border-slate-200/80 rounded-xl p-3 shadow-sm space-y-2">
+                  <div class="sm:col-span-5 bg-white border border-slate-200/80 rounded-xl p-3 shadow-sm space-y-2">
                     <div class="text-[10px] font-bold text-slate-400 uppercase">Quick Request</div>
                     <div class="h-6 bg-slate-100 rounded px-2 flex items-center text-[10px] text-slate-600">
                       General Checkup
@@ -330,14 +335,14 @@
                   </div>
                 </div>
 
-                <div class="grid grid-cols-3 gap-2 pt-2">
-                  <div class="bg-slate-50 border border-slate-200/70 rounded-lg py-2 px-2.5 text-center text-[11px] font-semibold text-slate-700">
+                <div class="grid grid-cols-3 gap-1.5 sm:gap-2 pt-2">
+                  <div class="bg-slate-50 border border-slate-200/70 rounded-lg py-2 px-1.5 sm:px-2.5 text-center text-[10px] sm:text-[11px] font-semibold text-slate-700">
                     Doctor Profiles
                   </div>
-                  <div class="bg-slate-50 border border-slate-200/70 rounded-lg py-2 px-2.5 text-center text-[11px] font-semibold text-slate-700">
+                  <div class="bg-slate-50 border border-slate-200/70 rounded-lg py-2 px-1.5 sm:px-2.5 text-center text-[10px] sm:text-[11px] font-semibold text-slate-700">
                     Lab Services
                   </div>
-                  <div class="bg-slate-50 border border-slate-200/70 rounded-lg py-2 px-2.5 text-center text-[11px] font-semibold text-slate-700">
+                  <div class="bg-slate-50 border border-slate-200/70 rounded-lg py-2 px-1.5 sm:px-2.5 text-center text-[10px] sm:text-[11px] font-semibold text-slate-700">
                     Google Maps
                   </div>
                 </div>
@@ -501,33 +506,37 @@
 
       <!-- Package Comparison Table -->
       <div class="max-w-6xl mx-auto mt-16">
-        <div class="text-center mb-8">
+        <div class="text-center mb-6 sm:mb-8">
           <h3 class="text-2xl font-extrabold text-[#101828]">Compare Package Features</h3>
           <p class="text-sm text-slate-600 mt-1">Side-by-side breakdown of Basic, Growth, and Pro.</p>
+          <p class="md:hidden text-[11px] font-semibold text-[#3867FF] mt-1.5 inline-flex items-center gap-1">
+            <span>Swipe horizontally to compare all plans</span>
+            <i data-lucide="arrow-right" class="w-3 h-3"></i>
+          </p>
         </div>
 
         <div class="overflow-x-auto custom-scrollbar rounded-2xl border border-slate-200 shadow-sm bg-white">
-          <table class="w-full text-left border-collapse min-w-[680px]">
+          <table class="w-full text-left border-collapse min-w-[640px]">
             <thead>
               <tr class="bg-slate-50 border-b border-slate-200">
-                <th class="py-4 px-6 text-sm font-extrabold text-[#101828] w-2/5">Feature</th>
-                <th class="py-4 px-5 text-center">
-                  <div class="text-sm font-extrabold text-[#101828]">Basic</div>
+                <th class="sticky left-0 z-10 bg-slate-50 py-4 px-4 sm:px-6 text-xs sm:text-sm font-extrabold text-[#101828] w-2/5 border-r border-slate-200/70">Feature</th>
+                <th class="py-4 px-4 sm:px-5 text-center">
+                  <div class="text-xs sm:text-sm font-extrabold text-[#101828]">Basic</div>
                   <div class="text-xs font-bold text-[#3867FF]">NPR 7,000</div>
                 </th>
-                <th class="py-4 px-5 text-center bg-blue-50/70">
+                <th class="py-4 px-4 sm:px-5 text-center bg-blue-50/70">
                   <div class="text-[10px] font-extrabold uppercase tracking-wider text-[#3867FF]">Most Popular</div>
-                  <div class="text-sm font-extrabold text-[#101828]">Growth</div>
+                  <div class="text-xs sm:text-sm font-extrabold text-[#101828]">Growth</div>
                   <div class="text-xs font-bold text-[#3867FF]">NPR 10,000</div>
                 </th>
-                <th class="py-4 px-5 text-center">
+                <th class="py-4 px-4 sm:px-5 text-center">
                   <div class="text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Best Value</div>
-                  <div class="text-sm font-extrabold text-[#101828]">Pro</div>
+                  <div class="text-xs sm:text-sm font-extrabold text-[#101828]">Pro</div>
                   <div class="text-xs font-bold text-[#3867FF]">NPR 11,000</div>
                 </th>
               </tr>
             </thead>
-            <tbody id="comparisonTableBody" class="divide-y divide-slate-200/80 text-sm"></tbody>
+            <tbody id="comparisonTableBody" class="divide-y divide-slate-200/80 text-xs sm:text-sm"></tbody>
           </table>
         </div>
       </div>
@@ -1161,6 +1170,7 @@
           <ul class="space-y-2.5 text-sm text-slate-400">
             <li>Business Website Development</li>
             <li>Clinic Website Development</li>
+            <li>Personal Branding for Doctors &amp; Professionals</li>
             <li>Appointment Booking Systems</li>
             <li>E-commerce &amp; Product Catalog Websites</li>
             <li>Landing Page Development</li>
@@ -1195,24 +1205,24 @@
   <!-- ======================================================================
        13. CRAZY INTERACTIVE CHATBOT & LIVE SERVICE SPOTLIGHT POPUP
   ======================================================================= -->
-  <div id="cfChatWidget" class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex flex-col items-end gap-3 max-w-[calc(100vw-2rem)]">
+  <div id="cfChatWidget" class="fixed bottom-3 right-3 sm:bottom-6 sm:right-6 z-50 flex flex-col items-end gap-2.5 sm:gap-3 w-[calc(100vw-1.5rem)] sm:w-auto max-w-[380px] pointer-events-none">
 
     <!-- Dynamic Eye-Catching Service & Sample Business Spotlight Toast -->
     <div
       id="cfSpotlightPopup"
-      class="hidden w-[310px] sm:w-[340px] bg-white/95 backdrop-blur-xl border border-slate-200/90 rounded-2xl p-3.5 shadow-2xl shadow-slate-900/15 transition-all duration-300 transform translate-y-0"
+      class="hidden pointer-events-auto w-full sm:w-[340px] bg-white/95 backdrop-blur-xl border border-slate-200/90 rounded-2xl p-3 sm:p-3.5 shadow-2xl shadow-slate-900/15 transition-all duration-300 transform translate-y-0"
     >
-      <div class="flex items-start justify-between gap-2.5">
-        <div class="flex items-start gap-2.5">
-          <div id="cfSpotIconWrap" class="w-9 h-9 rounded-xl bg-gradient-to-br from-[#3867FF] to-[#42D9F8] text-white flex items-center justify-center shrink-0 shadow-sm mt-0.5">
+      <div class="flex items-start justify-between gap-2">
+        <div class="flex items-start gap-2.5 min-w-0">
+          <div id="cfSpotIconWrap" class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-gradient-to-br from-[#3867FF] to-[#42D9F8] text-white flex items-center justify-center shrink-0 shadow-sm mt-0.5">
             <i data-lucide="sparkles" class="w-4 h-4"></i>
           </div>
-          <div>
+          <div class="min-w-0">
             <div class="flex items-center gap-1.5">
-              <span id="cfSpotBadge" class="text-[9px] font-extrabold uppercase tracking-wider px-1.5 py-0.5 rounded bg-blue-50 text-[#3867FF]">
+              <span id="cfSpotBadge" class="text-[9px] font-extrabold uppercase tracking-wider px-1.5 py-0.5 rounded bg-blue-50 text-[#3867FF] truncate">
                 Sample Showcase
               </span>
-              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping"></span>
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping shrink-0"></span>
             </div>
             <p id="cfSpotTitle" class="text-xs font-extrabold text-[#101828] mt-1 leading-snug">
               A Kathmandu Dental Clinic gets its website with online booking!
@@ -1226,7 +1236,7 @@
           type="button"
           onclick="dismissSpotlightPopup()"
           aria-label="Close notification"
-          class="text-slate-400 hover:text-slate-700 p-1 rounded-lg hover:bg-slate-100 transition-colors cursor-pointer shrink-0"
+          class="text-slate-400 hover:text-slate-700 p-1.5 rounded-lg hover:bg-slate-100 transition-colors cursor-pointer shrink-0"
         >
           <i data-lucide="x" class="w-3.5 h-3.5"></i>
         </button>
@@ -1235,7 +1245,7 @@
         <button
           type="button"
           onclick="openChatFromSpotlight()"
-          class="text-[11px] font-extrabold text-[#3867FF] hover:text-[#2854E8] inline-flex items-center gap-1 cursor-pointer"
+          class="text-[11px] font-extrabold text-[#3867FF] hover:text-[#2854E8] inline-flex items-center gap-1 py-0.5 cursor-pointer"
         >
           <span>Ask ClowFlow Bot</span>
           <i data-lucide="arrow-right" class="w-3 h-3"></i>
@@ -1245,7 +1255,7 @@
           href="https://wa.me/9779769022308?text=Hello%20ClowFlow!%20I%20saw%20your%20website%20showcase%20and%20would%20like%20to%20build%20a%20website%20for%20my%20business."
           target="_blank"
           rel="noopener noreferrer"
-          class="text-[11px] font-extrabold text-emerald-600 hover:text-emerald-700 inline-flex items-center gap-1"
+          class="text-[11px] font-extrabold text-emerald-600 hover:text-emerald-700 inline-flex items-center gap-1 py-0.5"
         >
           <i data-lucide="message-circle" class="w-3 h-3"></i>
           <span>WhatsApp Now</span>
@@ -1256,12 +1266,12 @@
     <!-- Expandable Interactive Chatbot Window -->
     <div
       id="cfChatWindow"
-      class="hidden w-[340px] sm:w-[380px] bg-white rounded-3xl border border-slate-200/90 shadow-2xl shadow-slate-950/25 overflow-hidden flex flex-col"
+      class="hidden pointer-events-auto w-full sm:w-[380px] max-h-[82vh] bg-white rounded-3xl border border-slate-200/90 shadow-2xl shadow-slate-950/25 overflow-hidden flex flex-col"
     >
       <!-- Chatbot Header -->
-      <div class="bg-gradient-to-r from-[#101828] via-[#16233B] to-[#101828] px-4 py-3.5 text-white flex items-center justify-between">
-        <div class="flex items-center gap-2.5">
-          <div class="relative w-10 h-10 rounded-xl bg-gradient-to-br from-[#3867FF] to-[#42D9F8] p-[1.5px] shrink-0">
+      <div class="bg-gradient-to-r from-[#101828] via-[#16233B] to-[#101828] px-4 py-3 text-white flex items-center justify-between shrink-0">
+        <div class="flex items-center gap-2.5 min-w-0">
+          <div class="relative w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-[#3867FF] to-[#42D9F8] p-[1.5px] shrink-0">
             <div class="w-full h-full rounded-[10px] bg-[#101828] flex items-center justify-center overflow-hidden">
               <img
                 src="https://i.ibb.co/CpWks7bj/logo.png"
@@ -1273,31 +1283,31 @@
             </div>
             <span class="absolute -bottom-0.5 -right-0.5 w-3 h-3 rounded-full bg-emerald-400 border-2 border-[#101828]"></span>
           </div>
-          <div>
-            <div class="text-sm font-extrabold flex items-center gap-1.5">
-              <span>ClowFlow Smart Guide</span>
-              <span class="text-[9px] font-bold uppercase px-1.5 py-0.5 rounded bg-[#3867FF]/30 text-[#42D9F8]">Online</span>
+          <div class="min-w-0">
+            <div class="text-xs sm:text-sm font-extrabold flex items-center gap-1.5">
+              <span class="truncate">ClowFlow Smart Guide</span>
+              <span class="text-[9px] font-bold uppercase px-1.5 py-0.5 rounded bg-[#3867FF]/30 text-[#42D9F8] shrink-0">Online</span>
             </div>
-            <div class="text-[11px] text-slate-300">Instant answers &amp; WhatsApp connect</div>
+            <div class="text-[11px] text-slate-300 truncate">Instant answers &amp; WhatsApp connect</div>
           </div>
         </div>
         <button
           type="button"
           onclick="toggleChatWidget(false)"
           aria-label="Minimize chat"
-          class="p-2 rounded-xl text-slate-300 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
+          class="p-2 rounded-xl text-slate-300 hover:text-white hover:bg-white/10 transition-colors cursor-pointer shrink-0"
         >
           <i data-lucide="chevron-down" class="w-5 h-5"></i>
         </button>
       </div>
 
       <!-- Chat Messages Scroll Area -->
-      <div id="cfChatMessages" class="p-4 space-y-3 max-h-[300px] overflow-y-auto bg-[#F8FAFC] text-xs sm:text-[13px]">
+      <div id="cfChatMessages" class="p-3.5 sm:p-4 space-y-3 flex-1 min-h-[160px] max-h-[260px] overflow-y-auto bg-[#F8FAFC] text-xs sm:text-[13px]">
         <!-- Populated dynamically via JS -->
       </div>
 
       <!-- Quick Prompt Chips -->
-      <div class="px-3.5 py-2.5 bg-white border-t border-slate-100">
+      <div class="px-3.5 py-2 bg-white border-t border-slate-100 shrink-0">
         <div class="text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-1.5">Tap to explore services:</div>
         <div class="flex flex-wrap gap-1.5" id="cfQuickReplies">
           <button type="button" onclick="handleBotPrompt('pricing')" class="px-2.5 py-1.5 rounded-xl bg-blue-50 hover:bg-blue-100 text-[#3867FF] font-bold text-[11px] transition-colors cursor-pointer">
@@ -1316,12 +1326,12 @@
       </div>
 
       <!-- Custom Message Input -> Sends Directly to WhatsApp -->
-      <form onsubmit="handleCustomChatSubmit(event)" class="p-3 bg-white border-t border-slate-200/80 flex items-center gap-2">
+      <form onsubmit="handleCustomChatSubmit(event)" class="p-2.5 sm:p-3 bg-white border-t border-slate-200/80 flex items-center gap-2 shrink-0">
         <input
           id="cfChatInput"
           type="text"
           placeholder="Type your business name or question..."
-          class="flex-1 bg-slate-100 focus:bg-white border border-transparent focus:border-[#3867FF] rounded-xl px-3.5 py-2.5 text-xs text-[#101828] focus:outline-none transition-colors"
+          class="flex-1 min-w-0 bg-slate-100 focus:bg-white border border-transparent focus:border-[#3867FF] rounded-xl px-3 py-2.5 text-base sm:text-xs text-[#101828] focus:outline-none transition-colors"
         />
         <button
           type="submit"
@@ -1338,30 +1348,30 @@
         href="https://wa.me/9779769022308?text=Hello%20ClowFlow!%20I%20was%20chatting%20with%20your%20website%20assistant%20and%20want%20to%20build%20a%20website%20for%20my%20business."
         target="_blank"
         rel="noopener noreferrer"
-        class="bg-emerald-600 hover:bg-emerald-700 text-white py-2.5 px-4 text-xs font-extrabold flex items-center justify-center gap-2 transition-colors"
+        class="bg-emerald-600 hover:bg-emerald-700 text-white py-2.5 px-4 text-[11px] sm:text-xs font-extrabold flex items-center justify-center gap-2 transition-colors shrink-0"
       >
-        <i data-lucide="message-circle" class="w-4 h-4"></i>
-        <span>Continue Chat on WhatsApp (+977 9769022308)</span>
+        <i data-lucide="message-circle" class="w-4 h-4 shrink-0"></i>
+        <span class="truncate">Continue Chat on WhatsApp (+977 9769022308)</span>
       </a>
     </div>
 
     <!-- Floating Launcher Buttons Row -->
-    <div class="flex items-center gap-2.5">
+    <div class="pointer-events-auto flex items-center gap-2 sm:gap-2.5">
       <!-- Interactive Chatbot Trigger -->
       <button
         type="button"
         id="cfChatLauncherBtn"
         onclick="toggleChatWidget()"
         aria-label="Open ClowFlow Assistant"
-        class="relative group flex items-center gap-2.5 bg-[#101828] hover:bg-[#3867FF] text-white px-4 py-3.5 rounded-full shadow-2xl shadow-slate-950/30 border border-white/10 transition-all duration-300 hover:scale-105 cursor-pointer"
+        class="relative group flex items-center gap-2 bg-[#101828] hover:bg-[#3867FF] text-white px-3.5 py-3 sm:px-4 sm:py-3.5 rounded-full shadow-2xl shadow-slate-950/30 border border-white/10 transition-all duration-300 hover:scale-105 cursor-pointer"
       >
-        <span class="relative flex h-2.5 w-2.5">
+        <span class="relative flex h-2.5 w-2.5 shrink-0">
           <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#42D9F8] opacity-75"></span>
           <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#42D9F8]"></span>
         </span>
-        <i data-lucide="bot" class="w-5 h-5 text-[#42D9F8] group-hover:text-white transition-colors"></i>
-        <span class="text-xs sm:text-sm font-extrabold">Ask ClowFlow</span>
-        <span id="cfUnreadBadge" class="w-5 h-5 rounded-full bg-rose-500 text-white text-[10px] font-extrabold flex items-center justify-center shadow">
+        <i data-lucide="bot" class="w-4 h-4 sm:w-5 sm:h-5 text-[#42D9F8] group-hover:text-white transition-colors shrink-0"></i>
+        <span class="text-xs sm:text-sm font-extrabold whitespace-nowrap">Ask ClowFlow</span>
+        <span id="cfUnreadBadge" class="w-5 h-5 rounded-full bg-rose-500 text-white text-[10px] font-extrabold flex items-center justify-center shadow shrink-0">
           1
         </span>
       </button>
@@ -1372,7 +1382,7 @@
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat with ClowFlow on WhatsApp"
-        class="group flex items-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white px-4 py-3.5 rounded-full shadow-2xl shadow-emerald-950/30 transition-all duration-300 hover:scale-105"
+        class="group flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white p-3 sm:px-4 sm:py-3.5 rounded-full shadow-2xl shadow-emerald-950/30 transition-all duration-300 hover:scale-105 shrink-0"
       >
         <i data-lucide="message-circle" class="w-5 h-5"></i>
         <span class="hidden md:inline text-sm font-extrabold pr-0.5">WhatsApp</span>
@@ -1410,6 +1420,22 @@
           'Opening hours',
           'Location and directions',
           'WhatsApp contact',
+        ],
+      },
+      {
+        title: 'Personal Branding (Doctors & Pros)',
+        categoryValue: 'Personal Branding (Doctor / Professional)',
+        icon: 'award',
+        accent: 'from-violet-600 to-indigo-600',
+        previewTag: 'Doctors, Specialists & Consultants',
+        previewHeader: 'Dr. S. Adhikari, MD • Personal Portfolio',
+        previewHighlight: 'Credentials, Publications & OPD Schedule',
+        summary: 'Establish authority online with a dedicated personal brand website for doctors, surgeons, lawyers, educators, and independent specialists.',
+        features: [
+          'Biography, qualifications & NMC/board credentials',
+          'Hospital & clinic chamber schedules',
+          'Patient consultation & appointment requests',
+          'Articles, media mentions & speaking highlights',
         ],
       },
       {
@@ -1711,6 +1737,48 @@
         features: ['Service Listings', 'Counseling Booking', 'Custom Inquiry Fields', 'Enhanced On-Page SEO'],
         palette: 'from-slate-800 to-blue-900',
       },
+      {
+        id: 'p7',
+        title: 'Dr. K. Poudel — Specialist Personal Brand',
+        category: 'Personal Branding',
+        categoryValue: 'Personal Branding (Doctor / Professional)',
+        subtitle: 'Conceptual demo project for a medical specialist featuring academic credentials, hospital chamber timings, and consultation booking.',
+        recommendedPkg: 'Growth — NPR 10,000',
+        features: ['Doctor Biography & Credentials', 'Chamber Timings', 'Consultation Booking', 'WhatsApp Direct Connect'],
+        palette: 'from-violet-600 to-blue-700',
+      },
+    ];
+
+    const WEBSITE_TYPES = [
+      'Clinic / Hospital',
+      'Dental Clinic',
+      'Personal Branding (Doctor / Professional)',
+      'Pharmacy',
+      'Beauty Salon',
+      'Restaurant / Cafe',
+      'Retail Shop',
+      'Hotel',
+      'Consultancy',
+      'Other',
+    ];
+
+    const PACKAGE_CHOICES = [
+      { label: 'Basic — NPR 7,000', sub: '1–3 pages • Essential online presence' },
+      { label: 'Growth — NPR 10,000', sub: '4–6 pages • Appointment booking + WhatsApp' },
+      { label: 'Pro — NPR 11,000', sub: 'Up to 8 pages • Advanced workflow & priority support' },
+      { label: 'Not sure — Recommend one for me', sub: 'We will suggest the best fit on WhatsApp' },
+    ];
+
+    const FEATURE_CHOICES = [
+      'Appointment booking',
+      'WhatsApp integration',
+      'Contact form',
+      'Product catalog',
+      'Service listing',
+      'Online payments',
+      'Google Maps',
+      'Image gallery',
+      'Other',
     ];
 
     const FAQ_DATA = [
@@ -1719,8 +1787,8 @@
         a: 'Our website packages start at NPR 7,000, with Growth at NPR 10,000 and Pro at NPR 11,000.',
       },
       {
-        q: 'Can you build a website for my clinic?',
-        a: 'Yes. We can build clinic websites with doctor profiles, medical services, appointment request forms, contact information, and WhatsApp integration.',
+        q: 'Can you build a website for my clinic or personal brand?',
+        a: 'Yes. We can build clinic websites as well as personal branding websites for doctors and professionals with profiles, services, appointment request forms, contact information, and WhatsApp integration.',
       },
       {
         q: 'Can customers book appointments through my website?',
@@ -1754,37 +1822,6 @@
         q: 'How do I get started?',
         a: 'Select a package or complete the inquiry form. We will contact you through WhatsApp.',
       },
-    ];
-
-    const WEBSITE_TYPES = [
-      'Clinic / Hospital',
-      'Dental Clinic',
-      'Pharmacy',
-      'Beauty Salon',
-      'Restaurant / Cafe',
-      'Retail Shop',
-      'Hotel',
-      'Consultancy',
-      'Other',
-    ];
-
-    const PACKAGE_CHOICES = [
-      { label: 'Basic — NPR 7,000', sub: '1–3 pages • Essential online presence' },
-      { label: 'Growth — NPR 10,000', sub: '4–6 pages • Appointment booking + WhatsApp' },
-      { label: 'Pro — NPR 11,000', sub: 'Up to 8 pages • Advanced workflow & priority support' },
-      { label: 'Not sure — Recommend one for me', sub: 'We will suggest the best fit on WhatsApp' },
-    ];
-
-    const FEATURE_CHOICES = [
-      'Appointment booking',
-      'WhatsApp integration',
-      'Contact form',
-      'Product catalog',
-      'Service listing',
-      'Online payments',
-      'Google Maps',
-      'Image gallery',
-      'Other',
     ];
 
     // ========================================================================
@@ -1956,7 +1993,7 @@
         };
         return `
           <tr class="hover:bg-slate-50/70 transition-colors">
-            <td class="py-3.5 px-6 font-medium text-slate-700">${row.feature}</td>
+            <td class="sticky left-0 z-10 bg-white py-3.5 px-4 sm:px-6 font-medium text-slate-700 border-r border-slate-200/70">${row.feature}</td>
             ${renderCell(row.basic, false)}
             ${renderCell(row.growth, true)}
             ${renderCell(row.pro, false)}
@@ -2099,7 +2136,7 @@
     // 5. PORTFOLIO FILTER & MODAL PREVIEW
     // ========================================================================
     function renderPortfolio() {
-      const categories = ['All', 'Healthcare', 'Dental', 'Beauty & Wellness', 'Restaurants', 'Retail', 'Corporate'];
+      const categories = ['All', 'Healthcare', 'Dental', 'Personal Branding', 'Beauty & Wellness', 'Restaurants', 'Retail', 'Corporate'];
       const filterBar = document.getElementById('portfolioFilterBar');
       filterBar.innerHTML = categories
         .map(
@@ -2710,28 +2747,10 @@
     // ========================================================================
     const SPOTLIGHT_MESSAGES = [
       {
-        badge: 'Demo Use Case • Healthcare',
-        title: 'A Clinic gets its website with OPD booking!',
-        sub: 'Doctor profiles, medical services & 1-tap WhatsApp requests.',
-        waText: 'Hello ClowFlow! I want a Clinic website with appointment booking like your showcase.',
-      },
-      {
-        badge: 'Demo Use Case • Dental',
-        title: 'A Dental Clinic gets its website with slot booking!',
-        sub: 'Treatment menu, dentist info & preferred date/time selection.',
-        waText: 'Hello ClowFlow! I want a Dental Clinic website with booking functionality.',
-      },
-      {
-        badge: 'ClowFlow Service • NPR 7,000',
-        title: 'Launch your Business Website starting at NPR 7,000!',
-        sub: 'Mobile-friendly design, Google Maps, contact form & WhatsApp button.',
-        waText: 'Hello ClowFlow! Tell me more about the Basic Website Package (NPR 7,000).',
-      },
-      {
-        badge: 'Demo Use Case • Retail & Salons',
-        title: 'A Retail Shop & Salon gets its digital catalog!',
-        sub: 'Showcase products, pricing menus & take orders via WhatsApp.',
-        waText: 'Hello ClowFlow! I want a website with a product/service catalog and WhatsApp inquiries.',
+        badge: 'Demo Use Case • Personal Branding',
+        title: 'A Specialist Doctor launches a Personal Brand Website!',
+        sub: 'Credentials, chamber timings, publications & direct OPD booking.',
+        waText: 'Hello ClowFlow! I am interested in a Personal Branding website for a doctor / professional.',
       },
       {
         badge: 'Most Popular • NPR 10,000',
@@ -2862,12 +2881,12 @@
             `<div><strong>ClowFlow Digital Solutions:</strong></div>
              <ul class="text-slate-600 space-y-1 list-disc pl-4">
                <li>Business &amp; Corporate Websites</li>
+               <li>Personal Branding for Doctors &amp; Professionals</li>
                <li>Clinic &amp; Dental Booking Websites</li>
                <li>Salon &amp; Restaurant Digital Menus</li>
                <li>Retail Product Catalogs with WhatsApp Order</li>
-               <li>SEO-Ready Landing Pages</li>
              </ul>`,
-            'Hello ClowFlow! I would like to discuss your website development services for my business.'
+            'Hello ClowFlow! I would like to discuss your website and personal branding services.'
           );
         }, 250);
       } else if (topic === 'booking') {
